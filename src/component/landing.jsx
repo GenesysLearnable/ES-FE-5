@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import saveme from "../image/saveme logo 2.png";
 import paramedic from "../image/from paramedic.png";
 import Ellipse from "../image/Ellipse 1.png";
@@ -26,10 +27,12 @@ function Landing() {
       <div className="nav-bar">
         <a href=""><img src={saveme}  alt=""  /></a>
         <div className="nav-bar-1">
-          <a href="">Home</a>
-          <a href="">About Us</a>
-          <a href="">Contact Us</a>
-          <a href="">Login</a>
+          <ul>
+          <li><Link to="/Home" as="a">Home</Link></li>
+          <li><Link to="/About" as="a">About</Link></li>
+          <li><Link to="/ContactUs" as="a">Contact Us</Link></li>
+          <li><Link to="/Login" as="a">Login</Link></li>
+          </ul>
         </div>
         <span className="BTN">
           <button>

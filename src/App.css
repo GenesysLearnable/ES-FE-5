@@ -29,6 +29,11 @@
   left: 390px;
 }
 
+.nav-bar-1 ul{
+  display: flex;
+  list-style: none;
+}
+
 .nav-bar-1 a:hover {
   color: #d20606;
 }

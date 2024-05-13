@@ -10,9 +10,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/landing" element={<Landing />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/notfoundpage" element={<NotFoundPage />} />
+         <Route path="/home" element={<Navigate to="/home" />} />
+
       </Routes>
     </Router>
   );

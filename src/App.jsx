@@ -17,11 +17,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/landing" element={<Landing />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Signin" element={<Signin />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

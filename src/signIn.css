@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapi.com/css2?family=Poppins&display=swap');
+
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffffc5;
+}
+
+.sign-in{
+  padding: 10px;
+}
+
+.inner-sign-in{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  margin-left: 250px;
+  height: 611px;
+}
+
+#para-2{
+  width: 450px;
+}
+#rect-2{
+  width: 450px;
+}
+#log-2{
+  width: 170px;
+}
+
+.image-section-sign-in img:nth-child(2) {
+  position: absolute;
+  left: 260px;
+  object-fit: cover;
+}
+
+.image-section-sign-in img:nth-child(3) {
+  position: absolute;
+  top: 205px;
+  left: 390px;
+  object-fit: cover;
+}
+
+.image-section-sign-in h2:nth-child(4){
+  position: absolute;
+  bottom: 240px;
+  left: 415px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.sign-in-details{
+  width: 450px;
+}
+
+.sign-in-details h1{
+  padding-top: 50px;
+  padding-left: 70px;
+  font-size: 20px;
+  color: black;
+}
+
+.sign-in-details form{
+  padding-top: 50px;
+  padding-left: 90px;
+}
+
+.sign-in-details input{
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #8f8f8f;
+  color: #8f8f8f;
+  padding-top: 50px;
+  outline: none;
+}
+
+.sign-in-details input::placeholder{
+  color: black;
+  font-weight: bolder;
+}
+
+.sign-in-details input:focus {
+  background-color: #ffffff; 
+}
+
+.sign-in-button{
+  background-color: #d20606;
+  margin-top: 80px;
+  margin-left: 80px;
+  border-radius: 20px;
+  width: 100px;
+}
+
+.sign-in-details form p{
+  padding-top: 40px;
+  color: #8f8f8f;
+}
+
+#here-2{
+  color: #d20606;
+}
+

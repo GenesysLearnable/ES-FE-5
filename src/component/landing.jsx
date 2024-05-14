@@ -35,13 +35,15 @@ function Landing() {
           </ul>
         </div>
         <span className="BTN">
-          <button>
+           
+        <Link to="/Signup"><button type="submit">Sign Up</button></Link>
+          {/* <button>
             {" "}
             <a href="" target="_blank" rel="noopener noreferrer">
               {" "}
               Sign Up{" "}
             </a>
-          </button>
+          </button> */}
         </span>
       </div>
 

@@ -1,4 +1,3 @@
-import { useState } from "react";
 { Link } from 'react-router-dom';
 import logo from "./home-image/saveme logo 2.png";
 import searchIcon from "./home-image/Icon.png";
@@ -44,7 +43,7 @@ function Home() {
           <img className="search-icon" src={searchIcon} alt="Search" />
           <input
             type="text"
-            placeholder="Emergency contact..."
+            placeholder="Emergency contact...."
             value={query}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}

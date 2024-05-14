@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapi.com/css2?family=Poppins&display=swap');
+
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffffc5;
+}
+
+.log-in{
+  padding: 10px;
+}
+
+.inner-log-in{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  margin-left: 250px;
+  height: 611px;
+}
+
+#para-1{
+  width: 450px;
+}
+#rect-1{
+  width: 450px;
+}
+#log-1{
+  width: 170px;
+}
+
+.log-in-image-section img:nth-child(2) {
+  position: absolute;
+  left: 260px;
+  object-fit: cover;
+}
+
+.log-in-image-section img:nth-child(3) {
+  position: absolute;
+  top: 205px;
+  left: 390px;
+  object-fit: cover;
+}
+
+.log-in-image-section h2:nth-child(4){
+  position: absolute;
+  bottom: 240px;
+  left: 415px;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+#forgot-password{
+  margin-left: 50px;
+}
+
+.log-in-details{
+  width: 450px;
+}
+
+.log-in-details h1{
+  padding-top: 50px;
+  padding-left: 90px;
+  font-size: 30px;
+  color: black;
+}
+
+.log-in-details form{
+  padding-top: 50px;
+  padding-left: 90px;
+}
+
+.log-in-details input{
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #8f8f8f;
+  color: #8f8f8f;
+  padding-top: 50px;
+  outline: none;
+}
+
+.log-in-details input::placeholder{
+  color: black;
+  font-weight: bolder;
+}
+
+.log-in-details input:focus {
+  background-color: #ffffff; 
+}
+
+.log-in-button{
+  background-color: #d20606;
+  margin-top: 80px;
+  margin-left: 80px;
+  border-radius: 20px;
+  width: 100px;
+}
+
+.log-in-details form p{
+  padding-top: 40px;
+  color: #8f8f8f;
+}
+
+#here-1{
+  color: #d20606;
+}
+

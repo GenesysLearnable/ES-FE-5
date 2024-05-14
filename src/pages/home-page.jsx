@@ -1,4 +1,8 @@
 import { useState } from "react";
+// <<<<<<< feat/homepages
+// =======
+// import { Link } from 'react-router-dom';
+// >>>>>>> develop
 import logo from "./home-image/saveme logo 2.png";
 import searchIcon from "./home-image/Icon.png";
 import bell from "./home-image/bell.png";

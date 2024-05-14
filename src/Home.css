@@ -20,6 +20,7 @@ nav{
 #logo{
   position: relative;
   right: 110px;
+  list-style: none;
 }
 
 .search-container {
@@ -78,6 +79,7 @@ nav{
 
 .inner-quick-section-1{
   padding-bottom: 50px;
+  list-style: none;
 }
 
 .inner-quick-section-1-1{

@@ -13,7 +13,7 @@ function App() {
         <Route path="/landing" element={<Landing />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/notfoundpage" element={<NotFoundPage />} />
-         <Route path="/home" element={<Navigate to="/home" />} />
+{/* <Route path="/home" element={<Navigate to="/home" />} />  */}
 
       </Routes>
     </Router>

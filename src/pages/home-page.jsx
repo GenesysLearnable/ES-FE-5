@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "./home-image/saveme logo 2.png";
 import searchIcon from "./home-image/Icon.png";
 import bell from "./home-image/bell.png";

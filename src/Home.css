@@ -62,3 +62,89 @@ nav{
   margin-right: 20px;
   margin-bottom: 10px;
 }
+
+/* section */
+
+.quick-section{
+  display: flex;
+}
+
+.inner-quick-section{
+  /* background-color: red; */
+  width: 350px;
+  padding-left: 80px;
+  padding-top: 75px;
+}
+
+.inner-quick-section-1{
+  padding-bottom: 50px;
+}
+
+.inner-quick-section-1-1{
+  color: #333333;
+}
+
+.inner-quick-section-1 img{
+  padding-right: 20px;
+  width: 40px;
+}
+
+.bottom-line {
+  border-bottom: 3px solid red; 
+  padding-bottom: 50px; 
+  width: 150px;
+}
+
+.top-line{
+  padding-top: 30px;
+}
+
+.quick-section-1 h1{
+  color: #333333;
+  padding-left: 100px;
+  padding-top: 15px;
+  font-size: xx-large;
+}
+
+.quick-section-2{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  padding-top: 30px;
+}
+
+.police{
+  margin-left: 50px;
+}
+
+#police{
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+.fire{
+  margin-right: 20px;
+} 
+
+#fire{
+  margin-top: 10px;
+  margin-left: 35px;
+} 
+
+.ambluance{
+  margin-right: 20px;
+}
+
+#ambluance{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.medic{
+  margin-right: 50px;
+}
+
+#medic{
+  margin-top: 10px;
+  margin-left: 40px;
+}

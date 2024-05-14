@@ -44,7 +44,7 @@ function Home() {
           <img className="search-icon" src={searchIcon} alt="Search" />
           <input
             type="text"
-            placeholder="Emergency contact..."
+            placeholder="Emergency contact...."
             value={query}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}

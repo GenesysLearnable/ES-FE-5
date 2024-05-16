@@ -82,6 +82,10 @@ nav{
   list-style: none;
 }
 
+.inner-quick-section-1-1:hover {
+  color: #d20606;
+}
+
 .inner-quick-section-1-1{
   color: #333333;
 }
@@ -150,3 +154,82 @@ nav{
   margin-top: 10px;
   margin-left: 40px;
 }
+footer{
+  color: #333333;
+}
+
+.contact-1{
+  display: flex;
+}
+
+.contact-01{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+.inner-contact-1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.ambstaff{
+  position: relative;
+  top: 30px;
+}
+
+.inner-contact-1 p{
+  position: relative;
+  right: 60px;
+  padding-top: 10px;
+}
+
+.inner-contact-1 button{
+  position: relative;
+  left: 70px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#number{
+  color: #d20606;
+}
+
+.bag{
+  display: flex;
+  padding-left: 120px;
+}
+
+#bag-p{
+  padding-right: 30px;
+  padding-top: 5px;
+  color: #d20606;
+}
+
+#bag-p-1{
+  position: absolute;
+  right: 310px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-size: x-large;
+}
+
+#bag-p-a{
+  position: absolute;
+  top: 1000px;
+  right: 120px;
+  color: #d20606;
+}
+
+#contact-h2{
+  position: relative;
+  left: 345px;
+  top: 30px;
+}
+

@@ -74,7 +74,7 @@ function Home() {
                 </Link>
               </li>
               <li className="inner-quick-section-1">
-                <Link to="/">
+                <Link to="/Location">
                   <img src={location} alt="" />{" "}
                   <span className="inner-quick-section-1-1">My Location</span>
                 </Link>

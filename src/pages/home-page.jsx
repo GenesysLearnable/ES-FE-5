@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import logo from "./home-image/saveme logo 2.png";
 import searchIcon from "./home-image/Icon.png";
 import bell from "./home-image/bell.png";
@@ -20,6 +23,22 @@ import pilot from "./home-image/Pilot at the airport terminal.png";
 import phoneCall from "./home-image/phone (1).png";
 import bag from "./home-image/Front view arrangement of medical still life elements.png";
 
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+let DefaultIcon = L.icon({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 function Home() {
   const [query, setQuery] = useState("");
 
@@ -32,6 +51,24 @@ function Home() {
       console.log("Searching for:", query);
     }
   };
+
+  const emergencyServices = [
+    {
+      position: [6.5244, 7.5186],
+      name: "Central-Police-Station",
+      type: "Police",
+    },
+    {
+      position: [6.5053, 7.5104],
+      name: "Enugu Fire Station",
+      type: "Fire Station",
+    },
+    {
+      position: [6.4942, 7.5293],
+      name: "University of Nigeria Teaching Hospital",
+      type: "Hospital",
+    },
+  ];
 
   return (
     <div>
@@ -139,6 +176,27 @@ function Home() {
                 <button id="medic">Call a medic</button>
               </div>
             </div>
+
+            {/* Map container */}
+            <MapContainer
+              className="map-container"
+              center={[6.5244, 7.5186]}
+              zoom={9}
+              style={{ height: "350px", width: "90%" }}
+            >
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              />
+
+              {emergencyServices.map((service, index) => (
+                <Marker key={index} position={service.position}>
+                  <Popup>
+                    {service.name} - {service.type}
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
           </div>
         </div>
       </section>
@@ -174,10 +232,14 @@ function Home() {
           </div>
 
           <div className="bag">
-            <a id="bag-p" href="">view all</a>
+            <a id="bag-p" href="">
+              view all
+            </a>
             <img src={bag} alt="" />
-            <a id="bag-p-a" href="">Click Here</a>
-            <p id="bag-p-1">Basic  First Aid</p> 
+            <a id="bag-p-a" href="">
+              Click Here
+            </a>
+            <p id="bag-p-1">Basic First Aid</p>
           </div>
         </div>
       </footer>

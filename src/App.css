@@ -382,6 +382,11 @@ section h2{
   background-color: #d20606;
   text-decoration: underline;
   font-weight: bolder;
+  color: #ffffff;
+}
+
+.underline{
+  list-style: none;
 }
 
 #call{

@@ -202,8 +202,8 @@ function Landing() {
             <span id="line">
               Call our <span id="call">emergency</span> line
             </span>
-            <button>
-              <span id="underline">222</span>
+            <button className='underline'>
+            <li><Link to="/Call"><span id="underline">222</span></Link></li>
             </button>
           </div>
         </div>

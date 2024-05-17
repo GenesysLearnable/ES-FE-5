@@ -13,6 +13,7 @@ import Signup from "./pagess/signUp";
 import Login from "./pagess/logIn";
 import Signin from "./pagess/signIn";
 import NotFoundPage from "./pages/NotFoundPage";
+import ContactUs from './contactpage/contactus';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signin" element={<Signin />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

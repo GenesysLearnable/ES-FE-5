@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 // import Landing from "./component/landing";
 // import Home from "./pages/home-page";
@@ -15,9 +14,9 @@ import Signup from "./pagess/signUp";
 import Login from "./pagess/logIn";
 import Signin from "./pagess/signIn";
 import Location from './location/location';
-import NotFoundPage from "./pages/NotFoundPage";
+import ContactUs from './contactpage/contactus';
 import Call from './call/call';
-
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -28,8 +27,9 @@ function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signin" element={<Signin />} />
-        <Route path="/Location" element={< Location/>} />
-        <Route path="/Call" element={< Call/>} />
+        <Route path="/Location" element={<Location />} />
+        <Route path="/Call" element={<Call />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

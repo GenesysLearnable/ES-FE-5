@@ -50,7 +50,7 @@ function ContactUs() {
         </div>
  
          <div className="card">
-          <img src="src/contactpage/world.png" alt="Location Icon" /><br/>
+          <img src="src/contactpage/find.png" alt="Location Icon" /><br/>
           <br/>
           <h3>Visit Us</h3>
           <br/>
@@ -60,7 +60,7 @@ function ContactUs() {
         </div>
 
         <div className="card">
-          <img src="src/contactpage/find.png" alt="Phone Icon" /><br/>
+          <img src="src/contactpage/pick.png" alt="Phone Icon" /><br/>
           <br/>
           <h3>Call Us</h3> 
           <br/> 

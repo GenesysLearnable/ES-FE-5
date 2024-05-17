@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapi.com/css2?family=Poppins&display=swap');
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+#logo-1{
+  position: relative;
+  right: 110px;
+  list-style: none;
+}
+
+.search-container-1 {
+  position: relative;
+  right: 190px;
+}
+.search-container-1 input {
+  width: 250%;
+  height: 70%;
+  margin-top: 10px;
+  padding-left: 10px;
+  background: transparent;
+  color: #333333;
+  outline: none; 
+  border-radius: 20px;
+  outline: none;
+  border-color: #d1d1d1;
+}
+
+.search-icon-1 {
+  position: absolute;
+  left: 400px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px; 
+  height: 12px;
+}
+
+.search-container-1 input::placeholder{
+  padding-left: 20px;
+  color: #333333;
+}
+
+.nav-IMG-1{
+  position: relative;
+  left: 100px;
+}
+
+#bell-1{
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* section */
+
+.location-quick-section{
+    display: flex;
+  }
+  
+  .location-inner-quick-section{ 
+    width: 350px;
+    padding-left: 80px;
+    padding-top: 75px;
+  }
+  
+  .location-inner-quick-section-1{
+    padding-bottom: 50px;
+    list-style: none;
+  }
+  
+  .location-inner-quick-section-1-1:hover {
+    color: #d20606;
+  }
+  
+  .location-inner-quick-section-1-1{
+    color: #333333;
+  }
+  
+  .location-inner-quick-section-1 img{
+    padding-right: 20px;
+    width: 40px;
+  }
+  
+  .location-bottom-line {
+    border-bottom: 3px solid red; 
+    padding-bottom: 50px; 
+    width: 150px;
+  }
+  
+  .location-top-line{
+    padding-top: 30px;
+  }
+
+  .location-BTN{
+    padding-top: 30px;
+    padding-left: 70px;
+    color: #333333;
+  }
+
+  .location-BTN-1{
+    margin-right: 50px;
+    background-color: #d3d3d3;
+    color: #333333;
+  }
+
+  .location-BTN-1:hover{
+    background-color: #d20606;
+    color: #d1d1d1;
+  }
+
+  .location-BTN-2{
+    margin-right: 50px;
+    background-color: #d3d3d3;
+    color: #333333;
+  }
+
+  .location-BTN-2:hover{
+    background-color: #d20606;
+    color: #d1d1d1;
+  }
+
+  .location-BTN-3{
+    margin-right: 50px;
+    background-color: #d3d3d3;
+    color: #333333;
+  }
+
+  .location-BTN-3:hover{
+    background-color: #d20606;
+    color: #d1d1d1;
+  }
+
+  .location-BTN-4{
+    margin-right: 50px;
+    background-color: #d3d3d3;
+    color: #333333;
+  }
+
+  .location-BTN-4:hover{
+    background-color: #d20606;
+    color: #d1d1d1;
+  }
+
+  .location-BTN-5{
+    margin-right: 50px;
+    background-color: #d3d3d3;
+    color: #333333;
+  }
+
+  .location-BTN-5:hover{
+    background-color: #d20606;
+    color: #d1d1d1;
+  }

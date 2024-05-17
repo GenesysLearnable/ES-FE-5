@@ -78,7 +78,7 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1">
-                <Link to="/">
+                <Link to="/Call">
                   <img src={phone} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">Calls</span>
                 </Link>

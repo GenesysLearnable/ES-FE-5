@@ -90,6 +90,16 @@
   padding-left: 10px;
   padding-bottom: 10px;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.paramedic-info button{
+  margin-left: 10px;
+  outline: none;
+}
+
+.paramedi-info-1{
+  color: #ffffff;
 }
 
 #medics img{
@@ -413,6 +423,7 @@ section h2{
   width: 290px;
   height: 35px;
   background-color: #f9f9f9;
+  color: #333333;
   border: none;
   border-radius: 20px;
 }
@@ -463,6 +474,7 @@ footer{
 .contact{
   margin-right: 150px;
   margin-top: 20px;
+  color: #ffffff;
 }
 
 .contact h2{

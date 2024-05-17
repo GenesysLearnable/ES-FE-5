@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import '../contactus.css';
 import saveme from './saveme.png'
-function App() {
+function ContactUs() {
   return (
     <div className="App">
       
@@ -73,4 +73,4 @@ function App() {
   );
 }
 
-export default App;
+export default ContactUs;

@@ -1,13 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-// import Landing from "./component/landing";
-// import Home from "./pages/home-page";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import "./Home.css";
-import './signUp.css'
-import './login.css'
-import './signIn.css'
-import './location.css'
-import './call.css'
+import './signUp.css';
+import './login.css';
+import './signIn.css';
+import './location.css';
+import './call.css';
 import Landing from "./component/landing";
 import Home from "./pages/home-page";
 import Signup from "./pagess/signUp";

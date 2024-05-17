@@ -184,6 +184,7 @@ nav{
     position: relative;
     left: 800px;
     color: #d20606;
+    cursor: pointer;
   }
 
   .inner-call-history-1{
@@ -222,7 +223,7 @@ nav{
     color: #d20606;
   }
 
-  #amaka{
+  #phone-calls{
     width: 980px;
     border-bottom: 1px solid whitesmoke;
     padding-bottom: 10px;

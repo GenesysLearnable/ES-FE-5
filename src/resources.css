@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapi.com/css2?family=Poppins&display=swap');
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+#res-logo{
+  position: relative;
+  right: 110px;
+  list-style: none;
+}
+
+.res-search-container {
+    position: relative;
+    right: 190px;
+  }
+  .res-search-container input {
+    width: 250%;
+    height: 70%;
+    margin-top: 10px;
+    padding-left: 10px;
+    background: transparent;
+    color: #333333;
+    outline: none; 
+    border-radius: 20px;
+    outline: none;
+    border-color: #d1d1d1;
+  }
+  
+  .res-search-icon {
+    position: absolute;
+    left: 400px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; 
+    height: 12px;
+  }
+  
+  .res-search-container input::placeholder{
+    padding-left: 20px;
+    color: #d1d1d1;
+  }
+  
+  .res-nav-IMG{
+    position: relative;
+    left: 120px;
+  }
+  
+  #res-bell{
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* section */
+  
+  .res-quick-section{
+    display: flex;
+  }
+  
+  .res-inner-quick-section{
+    /* background-color: red; */
+    width: 350px;
+    padding-left: 80px;
+    padding-top: 75px;
+  }
+  
+  .res-inner-quick-section-1{
+    padding-bottom: 50px;
+    list-style: none;
+  }
+  
+  .res-inner-quick-section-1-1:hover {
+    color: #d20606;
+  }
+  
+  .res-inner-quick-section-1-1{
+    color: #333333;
+  }
+  
+  .res-inner-quick-section-1 img{
+    padding-right: 20px;
+    width: 40px;
+  }
+  
+  .res-bottom-line {
+    border-bottom: 3px solid red; 
+    padding-bottom: 50px; 
+    width: 150px;
+  }
+  
+  .res-top-line{
+    padding-top: 30px;
+  }
+  
+  .res-quick-section-1 h1{
+    color: #333333;
+    padding-left: 100px;
+    padding-top: 15px;
+    font-size: xx-large;
+  }
+  
+  .res-quick-section-2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+  
+  .res-police{
+    margin-left: 50px;
+  }
+  
+  #res-police{
+    margin-top: 10px;
+    margin-left: 90px;
+  }
+  
+  .res-fire{
+    margin-right: 20px;
+  } 
+  
+  #res-fire{
+    margin-top: 10px;
+    margin-left: 35px;
+  } 
+  
+  .res-ambluance{
+    margin-right: 20px;
+  }
+  
+  #res-ambluance{
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .res-medic{
+    margin-right: 50px;
+  }

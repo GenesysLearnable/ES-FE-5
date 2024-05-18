@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "./resources-images/log-in.png";
-import searchIcon from "./resources-images/Icon.png";
-import bell from "./resources-images/bell.png";
-import portrait from "./resources-images/Portrait of modern man.png";
-import frame from "./resources-images/Frame 12.png";
-import location from "./resources-images/icons8-location-24.png";
-import book from "./resources-images/book.png";
-import phone from "./resources-images/phone.png";
-import coins from "./resources-images/coin-stack.png";
-import login from "./resources-images/log-in copy.png";
-import spanner from "./resources-images/icons8-spanner-24.png";
-import group26 from "./resources-images/Group 26.png";
-import group12 from "./resources-images/Group 12.png";
-import group14 from "./resources-images/Group 14.png";
-import group13 from "./resources-images/Group 13.png";
+import logo from "./recources-images/log-in.png";
+import searchIcon from "./recources-images/Icon.png";
+import bell from "./recources-images/bell.png";
+import portrait from "./recources-images/Portrait of modern man.png";
+import frame from "./recources-images/Frame 12.png";
+import location from "./recources-images/icons8-location-24.png";
+import book from "./recources-images/book.png";
+import phone from "./recources-images/phone.png";
+import coins from "./recources-images/coin-stack.png";
+import login from "./recources-images/log-in copy.png";
+import spanner from "./recources-images/icons8-spanner-24.png";
+import group26 from "./recources-images/Group 26.png";
+import group12 from "./recources-images/Group 12.png";
+import group14 from "./recources-images/Group 14.png";
+import group13 from "./recources-images/Group 13.png";
 
 function Resources() {
   const [query, setQuery] = useState("");

@@ -18,7 +18,8 @@ import Location from './location/location';
 import ContactUs from './contactpage/contactus';
 import Call from './call/call';
 import NotFoundPage from "./pages/NotFoundPage";
-import Resources from './resourcespage/resources';
+import Resources from './recourcespage/resources';
+
 
 function App() {
   return (

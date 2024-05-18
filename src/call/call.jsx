@@ -139,7 +139,7 @@ function Call() {
                 </Link>
               </li>
               <li className="call-location-inner-quick-section-1">
-                <Link to="/">
+                <Link to="/Resources">
                   <img src={book} alt="Resources" />{" "}
                   <span className="call-location-inner-quick-section-1-1">
                     Resources

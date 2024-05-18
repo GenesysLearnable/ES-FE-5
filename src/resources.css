@@ -9,6 +9,7 @@
 
 body{
   background-color: #ffffff;
+  color: #333333;
 }
 
 nav{
@@ -106,7 +107,6 @@ nav{
   }
   
   .res-quick-section-1 h1{
-    color: #333333;
     padding-left: 100px;
     padding-top: 15px;
     font-size: xx-large;
@@ -119,33 +119,136 @@ nav{
     padding-top: 30px;
   }
   
-  .res-police{
+  .res-group26{
     margin-left: 50px;
   }
   
-  #res-police{
-    margin-top: 10px;
-    margin-left: 90px;
+  #res-group26{
+   display: flex;
+   margin-left: 50px;
+   margin-top: 10px;
+   color: #333333;
+
   }
   
-  .res-fire{
+  .res-group12{
     margin-right: 20px;
   } 
   
-  #res-fire{
+  #res-group12{
+    display: flex;
     margin-top: 10px;
-    margin-left: 35px;
+    color: #333333;
   } 
   
-  .res-ambluance{
+  .res-group14{
     margin-right: 20px;
   }
   
-  #res-ambluance{
+  #res-group14{
+    display: flex;
     margin-top: 10px;
-    margin-left: 20px;
+    color: #333333;
   }
   
-  .res-medic{
+  .res-group13{
     margin-right: 50px;
+  }
+
+  #res-group13{
+    display: flex;
+    margin-top: 10px;
+    color: #333333;
+  }
+
+  .group26{
+    margin-right: 20px;
+  }
+
+  .res-image26{
+    width: 20%;
+    height: 20%;
+  }
+  .res-image12{
+    width: 20%;
+    height: 20%;
+  }
+  .res-image14{
+    width: 20%;
+    height: 20%;
+  }
+  .res-image13{
+    width: 18%;
+    height: 18%;
+  }
+
+  .inner-res-group26{
+    padding-left: 10px;
+  }
+
+  .inner-res-view{
+    font-size: 10px;
+  }
+
+  .inner-res-view span {
+    color: #d20606;
+  }
+
+  .read-more{
+    position: relative;
+    left: 105px;
+    font-size: 10px;
+    color: #d20606;
+    bottom: 20px;
+  }
+
+  .res-quick-section-3{
+    display: flex;
+  }
+
+  .res-quick-section-3 h2{
+    font-size: x-large;
+    padding-right: 90px;
+    margin-top: 10px;
+  }
+
+  .major{
+    display: flex;
+    margin-left: 90px;
+    padding: 10px;
+  }
+
+  .major button{
+    position: relative;
+    left: 280px;
+    width: 110px;
+    height: 45px;
+  }
+
+  .major p{
+    padding-left: 20px;
+  }
+
+  .paul{
+    font-size: 13px;
+    color: #d20606;
+  }
+
+  .stop-bleeding{
+    padding-top: 10px;
+  }
+
+  .Previously{
+    position: relative;
+    left: 350px;
+  }
+
+  .Previously button{
+    position: relative;
+    right: 125px;
+    bottom: 190px;
+  }
+
+  .Previously h2{
+    padding-right: 140px;
   }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "./recources-images/log-in.png";
+import logo from "./recources-images/saveme logo 2.png";
 import searchIcon from "./recources-images/Icon.png";
 import bell from "./recources-images/bell.png";
 import portrait from "./recources-images/Portrait of modern man.png";
@@ -15,6 +15,8 @@ import group26 from "./recources-images/Group 26.png";
 import group12 from "./recources-images/Group 12.png";
 import group14 from "./recources-images/Group 14.png";
 import group13 from "./recources-images/Group 13.png";
+import frame2362 from "./recources-images/Frame 2362.png";
+import frontBag from "./recources-images/Front view arrangement of medical still life elements (1).png";
 
 function Resources() {
   const [query, setQuery] = useState("");
@@ -72,7 +74,9 @@ function Resources() {
               <li className="res-inner-quick-section-1">
                 <Link to="/Location">
                   <img src={location} alt="" />{" "}
-                  <span className="res-inner-quick-section-1-1">My Location</span>
+                  <span className="res-inner-quick-section-1-1">
+                    My Location
+                  </span>
                 </Link>
               </li>
               <li className="res-inner-quick-section-1">
@@ -102,7 +106,9 @@ function Resources() {
                 <li className="res-inner-quick-section-1 top-line">
                   <Link to="/">
                     <img src={spanner} alt="" />{" "}
-                    <span className="res-inner-quick-section-1-1">Settings</span>
+                    <span className="res-inner-quick-section-1-1">
+                      Settings
+                    </span>
                   </Link>
                 </li>
                 <li className="res-inner-quick-section-1">
@@ -115,24 +121,87 @@ function Resources() {
             </div>
           </div>
 
-          <div className="res-uick-section-1">
+          <div className="res-quick-section-1">
             <h1>Most Visited Articles</h1>
             <div className="res-quick-section-2">
-              <div>
-                <img className="res-police" src={group26} alt="" />
-                
+              <div className="group26">
+                <img className="res-group26" src={group26} alt="" />
+                <div id="res-group26">
+                  <img className="res-image26" src={frame2362} alt="" />
+                  <div className="inner-res-group26">
+                    <p>Dr. John</p>
+                    <p className="inner-res-view"><span>1001</span> views</p>
+                    <span className="read-more">read more...</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <img className="res-fire" src={group12} alt="" />
-                
+              <div className="group12">
+                <img className="res-group12" src={group12} alt="" />
+                <div id="res-group12">
+                  <img className="res-image12" src={frame2362} alt="" />
+                  <div className="inner-res-group26">
+                    <p>Dr. John</p>
+                    <p className="inner-res-view"><span>1001</span> views</p>
+                    <span className="read-more">read more...</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <img className="res-ambluance" src={group14} alt="" />
-                
+              <div className="group14">
+                <img className="res-group14" src={group14} alt="" />
+                <div id="res-group14">
+                  <img className="res-image14" src={frame2362} alt="" />
+                  <div className="inner-res-group26">
+                    <p>Dr. John</p>
+                    <p className="inner-res-view"><span>1001</span> views</p>
+                    <span className="read-more">read more...</span>
+                  </div>
+                </div>
               </div>
+              <div className="group1">
+                <img className="res-group13" src={group13} alt="" />
+                <div id="res-group13">
+                  <img className="res-image13" src={frame2362} alt="" />
+                  <div className="inner-res-group26">
+                    <p>Dr. John</p>
+                    <p className="inner-res-view"><span>1001</span> views</p>
+                    <span className="read-more">read more...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="res-quick-section-3">
               <div>
-                <img className="res-medic" src={group13} alt="" />
-                
+                <h2>Major articles</h2>
+                <div className="major">
+                  <img src={frontBag} alt="" />
+                  <div className="stop-bleeding">
+                    <p>How to stop bleeding</p>
+                    <p className="paul">Dr. Paul</p>
+                  </div>
+                  <button>Read</button>
+                </div>
+                <div className="major">
+                  <img src={frontBag} alt="" />
+                  <div className="stop-bleeding">
+                    <p>How to stop bleeding</p>
+                    <p className="paul">Dr. Paul</p>
+                  </div>
+                  <button>Read</button>
+                </div >
+                <div className="major">
+                  <img src={frontBag} alt="" />
+                  <div className="stop-bleeding">
+                    <p>How to stop bleeding</p>
+                    <p className="paul">Dr. Paul</p>
+                  </div>
+                  <button>Read</button>
+                </div>
+              </div>
+              <div className="Previously">
+                <h2>Previously read</h2>
+                <img src={group26} alt="" />
+                <button>Continue</button>
               </div>
             </div>
           </div>

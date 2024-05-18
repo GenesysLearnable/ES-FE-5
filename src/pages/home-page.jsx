@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import logo from "./home-image/saveme logo 2.png";
@@ -39,24 +39,49 @@ let DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
+// Custom hook to update the map center
+const UpdateMapCenter = ({ center }) => {
+  const map = useMap();
+  map.setView(center);
+  return null;
+};
+
 function Home() {
   const [query, setQuery] = useState("");
+  const [mapCenter, setMapCenter] = useState([6.5244, 7.5186]);
+  const [searchResult, setSearchResult] = useState(null);
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
+  const handleSearch = async () => {
+    if (query.trim() === "") return;
+
+    try {
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}`);
+      const data = await response.json();
+      if (data.length > 0) {
+        const { lat, lon } = data[0];
+        setMapCenter([parseFloat(lat), parseFloat(lon)]);
+        setSearchResult({ lat: parseFloat(lat), lon: parseFloat(lon), display_name: data[0].display_name });
+      }
+    } catch (error) {
+      console.error("Error fetching geolocation:", error);
+    }
+  };
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      console.log("Searching for:", query);
+      handleSearch();
     }
   };
 
   const emergencyServices = [
     {
       position: [6.5244, 7.5186],
-      name: "Central-Police-Station",
-      type: "Police",
+      name: "Central Police Station",
+      type: "Police Station",
     },
     {
       position: [6.5053, 7.5104],
@@ -68,6 +93,27 @@ function Home() {
       name: "University of Nigeria Teaching Hospital",
       type: "Hospital",
     },
+    {
+      position: [6.4331, 7.523],
+      name: "New Haven Police Station",
+      type: "Police Station",
+    },
+    {
+      position: [6.4361, 7.4965],
+      name: "GRA Fire Station",
+      type: "Fire Station",
+    },
+    {
+      position: [6.4525, 7.5101],
+      name: "National Orthopaedic Hospital",
+      type: "Hospital",
+    },
+    { position: [6.444, 7.5107], name: "Parklane Hospital", type: "Hospital" },
+    {
+      position: [6.4475, 7.505],
+      name: "Abakpa Police Station",
+      type: "Police Station",
+    },
   ];
 
   return (
@@ -76,7 +122,7 @@ function Home() {
         <ul>
           <li>
             <Link to="/">
-              <img id="logo" src={logo} alt="" />
+              <img id="logo" src={logo} alt="Logo" />
             </Link>
           </li>
         </ul>
@@ -93,9 +139,9 @@ function Home() {
         </div>
 
         <div className="nav-IMG">
-          <img id="bell" src={bell} alt="" />
-          <a href="">
-            <img src={portrait} alt="" />
+          <img id="bell" src={bell} alt="Bell" />
+          <a href="#">
+            <img src={portrait} alt="Portrait" />
           </a>
         </div>
       </nav>
@@ -106,31 +152,31 @@ function Home() {
             <ul>
               <li className="inner-quick-section-1">
                 <Link to="/Home">
-                  <img src={frame} alt="" />{" "}
+                  <img src={frame} alt="Home" />{" "}
                   <span className="inner-quick-section-1-1">Home</span>
                 </Link>
               </li>
               <li className="inner-quick-section-1">
                 <Link to="/Location">
-                  <img src={location} alt="" />{" "}
+                  <img src={location} alt="Location" />{" "}
                   <span className="inner-quick-section-1-1">My Location</span>
                 </Link>
               </li>
               <li className="inner-quick-section-1">
                 <Link to="/Resources">
-                  <img src={book} alt="" />{" "}
+                  <img src={book} alt="Resources" />{" "}
                   <span className="inner-quick-section-1-1">Resources</span>
                 </Link>
               </li>
               <li className="inner-quick-section-1">
                 <Link to="/Call">
-                  <img src={phone} alt="" />{" "}
+                  <img src={phone} alt="Calls" />{" "}
                   <span className="inner-quick-section-1-1">Calls</span>
                 </Link>
               </li>
               <li className="inner-quick-section-1 bottom-line">
                 <Link to="/">
-                  <img src={coins} alt="" />{" "}
+                  <img src={coins} alt="Donations" />{" "}
                   <span className="inner-quick-section-1-1">Donations</span>
                 </Link>
               </li>
@@ -142,13 +188,13 @@ function Home() {
                 {}
                 <li className="inner-quick-section-1 top-line">
                   <Link to="/">
-                    <img src={spanner} alt="" />{" "}
+                    <img src={spanner} alt="Settings" />{" "}
                     <span className="inner-quick-section-1-1">Settings</span>
                   </Link>
                 </li>
                 <li className="inner-quick-section-1">
                   <Link to="/">
-                    <img src={login} alt="" />{" "}
+                    <img src={login} alt="Log Out" />{" "}
                     <span className="inner-quick-section-1-1">Log Out</span>
                   </Link>
                 </li>
@@ -160,19 +206,19 @@ function Home() {
             <h1>Quick call contacts</h1>
             <div className="quick-section-2">
               <div>
-                <img className="police" src={security} alt="" />
+                <img className="police" src={security} alt="Police" />
                 <button id="police">Call the police</button>
               </div>
               <div>
-                <img className="fire" src={firefighter} alt="" />
+                <img className="fire" src={firefighter} alt="Firefighter" />
                 <button id="fire">Call fire service</button>
               </div>
               <div>
-                <img className="ambluance" src={british} alt="" />
+                <img className="ambluance" src={british} alt="Ambulance" />
                 <button id="ambluance">Call an ambulance</button>
               </div>
               <div>
-                <img className="medic" src={ems} alt="" />
+                <img className="medic" src={ems} alt="Medic" />
                 <button id="medic">Call a medic</button>
               </div>
             </div>
@@ -180,7 +226,7 @@ function Home() {
             {/* Map container */}
             <MapContainer
               className="map-container"
-              center={[6.5244, 7.5186]}
+              center={mapCenter}
               zoom={9}
               style={{ height: "350px", width: "90%" }}
             >
@@ -188,6 +234,7 @@ function Home() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
+              <UpdateMapCenter center={mapCenter} />
 
               {emergencyServices.map((service, index) => (
                 <Marker key={index} position={service.position}>
@@ -196,6 +243,14 @@ function Home() {
                   </Popup>
                 </Marker>
               ))}
+
+              {searchResult && (
+                <Marker position={[searchResult.lat, searchResult.lon]}>
+                  <Popup>
+                    {searchResult.display_name}
+                  </Popup>
+                </Marker>
+              )}
             </MapContainer>
           </div>
         </div>
@@ -207,36 +262,36 @@ function Home() {
           <div>
             <div className="contact-1">
               <div className="inner-contact-1 ambstaff">
-                <img src={ambStaff} alt="" />
+                <img src={ambStaff} alt="Ambulance Staff" />
                 <div>
                   <p>Medic James</p>
                   <p id="number">+2348045679876</p>
                 </div>
                 <button>
-                  <img src={phoneCall} alt="" />
+                  <img src={phoneCall} alt="Phone Call" />
                 </button>
               </div>
             </div>
             <div className="contact-1">
               <div className="inner-contact-1">
-                <img src={pilot} alt="" />
+                <img src={pilot} alt="Pilot" />
                 <div>
                   <p>Officer Paul</p>
                   <p id="number">+2348045679876</p>
                 </div>
                 <button>
-                  <img src={phoneCall} alt="" />
+                  <img src={phoneCall} alt="Phone Call" />
                 </button>
               </div>
             </div>
           </div>
 
           <div className="bag">
-            <a id="bag-p" href="">
+            <a id="bag-p" href="#">
               view all
             </a>
-            <img src={bag} alt="" />
-            <a id="bag-p-a" href="">
+            <img src={bag} alt="Bag" />
+            <a id="bag-p-a" href="#">
               Click Here
             </a>
             <p id="bag-p-1">Basic First Aid</p>

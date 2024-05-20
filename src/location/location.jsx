@@ -84,7 +84,7 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1 location-bottom-line">
-                <Link to="/">
+                <Link to="/Donation">
                   <img src={coins} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">Donations</span>
                 </Link>

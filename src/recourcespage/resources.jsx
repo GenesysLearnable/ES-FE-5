@@ -92,7 +92,7 @@ function Resources() {
                 </Link>
               </li>
               <li className="res-inner-quick-section-1 bottom-line">
-                <Link to="/">
+                <Link to="/Donation">
                   <img src={coins} alt="" />{" "}
                   <span className="res-inner-quick-section-1-1">Donations</span>
                 </Link>

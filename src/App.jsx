@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-// import Landing from "./component/landing";
-// import Home from "./pages/home-page";
 import "./App.css";
 import "./Home.css";
 import './signUp.css'

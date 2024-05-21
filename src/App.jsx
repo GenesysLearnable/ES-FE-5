@@ -15,11 +15,11 @@ import Login from "./pagess/logIn";
 import Signin from "./pagess/signIn";
 import Location from './location/location';
 import ContactUs from './contactpage/contactus';
+import About from './aboutus/about';
 import Call from './call/call';
 import NotFoundPage from "./pages/NotFoundPage";
 import Resources from './recourcespage/resources';
 import Donation from './donationpage/donation';
-
 
 function App() {
   return (
@@ -35,6 +35,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Donation" element={<Donation />} />
+        <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

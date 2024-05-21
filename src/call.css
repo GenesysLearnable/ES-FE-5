@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapi.com/css2?family=Poppins&display=swap');
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+#call-logo{
+  position: relative;
+  right: 110px;
+  list-style: none;
+}
+
+.call-search-container-1 {
+  position: relative;
+  right: 190px;
+}
+.call-search-container-1 input {
+  width: 250%;
+  height: 70%;
+  margin-top: 10px;
+  padding-left: 10px;
+  background: transparent;
+  color: #333333;
+  outline: none; 
+  border-radius: 20px;
+  outline: none;
+  border-color: #d1d1d1;
+}
+
+.call-search-icon-1 {
+  position: absolute;
+  left: 400px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px; 
+  height: 12px;
+}
+
+.call-search-container-1 input::placeholder{
+  padding-left: 20px;
+  color: #333333;
+}
+
+.call-nav-IMG-1{
+  position: relative;
+  left: 100px;
+}
+
+#call-bell-1{
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* section */
+
+.call-location-quick-section{
+    display: flex;
+  }
+  
+  .call-location-inner-quick-section{ 
+    width: 350px;
+    padding-left: 80px;
+    padding-top: 75px;
+  }
+  
+  .call-location-inner-quick-section-1{
+    padding-bottom: 50px;
+    list-style: none;
+  }
+  
+  .call-location-inner-quick-section-1-1:hover {
+    color: #d20606;
+  }
+  
+  .call-location-inner-quick-section-1-1{
+    color: #333333;
+  }
+  
+  .call-location-inner-quick-section-1 img{
+    padding-right: 20px;
+    width: 40px;
+  }
+  
+  .call-location-bottom-line {
+    border-bottom: 3px solid red; 
+    padding-bottom: 50px; 
+    width: 150px;
+  }
+  
+  .call-location-top-line{
+    padding-top: 30px;
+  }
+
+  .call-quick-section-1 h1{
+    color: #333333;
+    padding-left: 100px;
+    padding-top: 15px;
+    font-size: xx-large;
+  }
+  
+  .call-quick-section-2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+  
+  .guards{
+    margin-left: 50px;
+  }
+  
+  #guards{
+    position: relative;
+    bottom: 48px;
+    margin-left: 90px; 
+  }
+
+  .icons-1{
+    position: relative;
+    bottom: 110px;
+    left: 80px;
+  }
+  
+  .male{
+    margin-right: 20px;
+  } 
+  
+  #male{
+    margin-top: 10px;
+    margin-left: 35px;
+  } 
+  
+  .pilot1{
+    margin-right: 20px;
+  }
+  
+  #pilot1{
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  
+  .front{
+    margin-right: 50px;
+  }
+  
+  #front{
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+
+  .call-history{
+    display: flex;
+    /* justify-content: space-between; */
+    color: #333333;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .inner-call-history{
+    font-display: flex;
+    flex-direction: row;
+  }
+
+  #history{
+    position: relative;
+    right: 1px;
+    margin-left: 50px;
+  }
+
+  #view{
+    position: relative;
+    left: 800px;
+    color: #d20606;
+    cursor: pointer;
+  }
+
+  .inner-call-history-1{
+    display: flex;
+    padding-top: 30px;
+  }
+
+  .contact-img{
+    position: relative;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacts{
+    position: relative;
+    left: 60px;
+    font-size: 14px;
+  }
+
+  .contact-img-1{
+    position: relative;
+    left: 710px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .call-history-contacts{
+    position: relative;
+    left: 380px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .nums{
+    color: #d20606;
+  }
+
+  #phone-calls{
+    width: 980px;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 10px;
+  }
+
+ 

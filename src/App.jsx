@@ -14,6 +14,7 @@ import Login from "./pagess/logIn";
 import Signin from "./pagess/signIn";
 import NotFoundPage from "./pages/NotFoundPage";
 import ContactUs from './contactpage/contactus';
+import About from './aboutus/about'
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/Signin" element={<Signin />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/About" element={<About />} />
+
       </Routes>
     </Router>
   );

@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import detectEthereumProvider from '@metamask/detect-provider';
+import Web3 from 'web3';
 import logo from "../pages/home-image/saveme logo 2.png";
 import searchIcon from "../pages/home-image/Icon.png";
 import bell from "../pages/home-image/bell.png";
@@ -18,12 +20,24 @@ import naleandfemale from "./donationImages/Male and female firefighters working
 
 function Donation() {
   const [query, setQuery] = useState("");
-  //   const donationGoal = 10000;
-  //   const donationAmount = 5000;
-  //   const donationPercentage = (donationAmount / donationGoal) * 100;
   const [donationAmount, setDonationAmount] = useState(5000);
+  const [account, setAccount] = useState(null);
+  const [error, setError] = useState('');
   const donationGoal = 10000;
   const donationPercentage = (donationAmount / donationGoal) * 100;
+
+  useEffect(() => {
+    const checkMetaMask = async () => {
+      const provider = await detectEthereumProvider();
+      if (provider) {
+        console.log('MetaMask provider detected');
+      } else {
+        setError('MetaMask not detected. Please install MetaMask.');
+      }
+    };
+
+    checkMetaMask();
+  }, []);
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
@@ -35,17 +49,51 @@ function Donation() {
     }
   };
 
-  //   const [query, setQuery] = useState("");
+  const connectMetaMask = async () => {
+    if (window.ethereum) {
+      const provider = window.ethereum;
+      try {
+        await provider.request({ method: 'eth_requestAccounts' });
+        const web3 = new Web3(provider);
+        const accounts = await web3.eth.getAccounts();
+        setAccount(accounts[0]);
+        setError(''); // Clear any previous errors
+      } catch (error) {
+        console.error("MetaMask connection error:", error);
+        setError('Failed to connect MetaMask. Please try again.');
+      }
+    } else {
+      console.error('MetaMask not detected. Please install MetaMask.');
+      setError('MetaMask not detected. Please install MetaMask.');
+    }
+  };
 
-  //   const handleInputChange = (event) => {
-  //     setQuery(event.target.value);
-  //   };
+  const handleDonate = async () => {
+    const provider = await detectEthereumProvider();
+    if (provider) {
+      try {
+        const web3 = new Web3(provider);
+        const accounts = await web3.eth.getAccounts();
 
-  //   const handleKeyDown = (event) => {
-  //     if (event.key === "Enter") {
-  //       console.log("Searching for:", query);
-  //     }
-  //   };
+        // Specify donation amount in Ether (adjust accordingly)
+        const amountInEther = '0.01';
+        const amountInWei = web3.utils.toWei(amountInEther, 'ether');
+
+        await web3.eth.sendTransaction({
+          from: accounts[0],
+          to: 'YOUR_RECEIVER_ADDRESS', // Replace with your donation receiver address
+          value: amountInWei
+        });
+
+        setDonationAmount(donationAmount + parseFloat(amountInEther) * 1000); // Adjust the calculation based on your goal
+      } catch (error) {
+        console.error("Donation transaction error:", error);
+        setError('Failed to process the donation. Please try again.');
+      }
+    } else {
+      setError('MetaMask not detected. Please install MetaMask.');
+    }
+  };
 
   return (
     <div>
@@ -123,8 +171,6 @@ function Donation() {
             <span>&nbsp;&nbsp;</span>
             <div>
               <ul>
-                {" "}
-                {}
                 <li className="location-inner-quick-section-1 location-top-line">
                   <Link to="/">
                     <img src={spanner} alt="" />{" "}
@@ -144,17 +190,6 @@ function Donation() {
               </ul>
             </div>
           </div>
-          {/* <div>
-            <div>
-              <img src={paramedic} alt="" />
-              <p>Discreet funding for accident patients</p>
-            </div>
-            <div>
-                <h4>Donate with your favourite cryptocurrency</h4>
-                <p>This is mainly for transparency and can be monitored on the blockscan</p>
-            </div>
-          </div> */}
-
           <div>
             <div className="donation-content">
               <div className="donation-info">
@@ -175,18 +210,6 @@ function Donation() {
                   This is mainly for transparency and can be monitored on the
                   blockscan.
                 </p>
-                {/* <div className="donation-bar"> */}
-                {/* <div className="donation-progress">
-                  style={{ width: `${donationPercentage}%` }}
-                </div>
-              </div> */}
-                {/* <div className="donation-bar">
-                <div
-                  className="donation-progress"
-                  style={{ width: `${donationPercentage}%` }}
-                ></div>
-              </div> */}
-
                 <div className="donation-bar-container">
                   <div className="donation-bar">
                     <div
@@ -221,12 +244,21 @@ function Donation() {
                     </div>
                   </div>
                 </div>
-                <button
-                  className="donate-now"
-                  onClick={() => setDonationAmount(donationAmount + 500)}
-                >
-                  Donate Now
-                </button>
+                {account ? (
+                  <button className="donate-now" onClick={handleDonate}>
+                    Donate Now
+                  </button>
+                ) : (
+                  <button className="donate-now" onClick={connectMetaMask}>
+                    Connect MetaMask
+                  </button>
+                )}
+                {account && (
+                  <div>
+                    <p>Connected Account: {account}</p>
+                  </div>
+                )}
+                {error && <p style={{ color: 'red' }}>{error}</p>}
               </div>
             </div>
             <div>

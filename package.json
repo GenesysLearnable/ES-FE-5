@@ -18,16 +18,17 @@
     "react-leaflet": "^4.2.1",
     "react-leaflet-search": "^2.0.1",
     "react-router-dom": "^6.23.1",
-    "web3": "^1.5.2" // Assuming this should be a valid version for web3
+    "web3": "^1.5.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0", // Adjusted version to match your dependencies
-    "@types/react-dom": "^18.0.0", // Adjusted version to match your dependencies
-    "@vitejs/plugin-react": "^1.0.0", // Adjusted version to match your dependencies
-    "eslint": "^8.6.0", // Updated eslint version
-    "eslint-plugin-react": "^7.32.0", // Updated eslint-plugin-react version
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.32.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^2.6.14" // Updated vite version
+    "vite": "^2.6.14"
   }
 }
+

@@ -23,6 +23,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Resources from './recourcespage/resources';
 import ResourcesFirstPage from './recourcespage/resourcesFirstPage';
 import Donation from './donationpage/donation';
+import ResourcesSecondPage from './recourcespage/resourcesSecondPage';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/ResourcesFirstPage" element={<ResourcesFirstPage />} />
+        <Route path="/ResourcesSecondPage" element={<ResourcesSecondPage />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />

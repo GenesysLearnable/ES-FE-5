@@ -7,7 +7,9 @@ import './signIn.css'
 import './location.css'
 import './call.css'
 import './resources.css'
-import './donation.css'
+import './ResourcesFirstPage.css';
+import './donation.css';
+
 import Landing from "./component/landing";
 import Home from "./pages/home-page";
 import Signup from "./pagess/signUp";
@@ -19,14 +21,16 @@ import About from './aboutus/about';
 import Call from './call/call';
 import NotFoundPage from "./pages/NotFoundPage";
 import Resources from './recourcespage/resources';
+import ResourcesFirstPage from './recourcespage/resourcesFirstPage';
 import Donation from './donationpage/donation';
+
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/Home" element={<Home />} /> 
+        <Route path="/Home" element={<Home />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signin" element={<Signin />} />
@@ -34,6 +38,7 @@ function App() {
         <Route path="/Call" element={<Call />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/ResourcesFirstPage" element={<ResourcesFirstPage />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />

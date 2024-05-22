@@ -9,6 +9,7 @@ import './signIn.css'
 import './location.css'
 import './call.css'
 import './resources.css'
+import './ResourcesFirstPage.css'
 import Landing from "./component/landing";
 import Home from "./pages/home-page";
 import Signup from "./pagess/signUp";
@@ -19,6 +20,7 @@ import ContactUs from './contactpage/contactus';
 import Call from './call/call';
 import NotFoundPage from "./pages/NotFoundPage";
 import Resources from './recourcespage/resources';
+import ResourcesFirstPage from './recourcespage/resourcesFirstPage';
 
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
         <Route path="/Call" element={<Call />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/ResourcesFirstPage" element={<ResourcesFirstPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

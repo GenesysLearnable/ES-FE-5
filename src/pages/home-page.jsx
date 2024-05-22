@@ -175,7 +175,7 @@ function Home() {
                 </Link>
               </li>
               <li className="inner-quick-section-1 bottom-line">
-                <Link to="/">
+                <Link to="/Donation">
                   <img src={coins} alt="Donations" />{" "}
                   <span className="inner-quick-section-1-1">Donations</span>
                 </Link>

@@ -12,7 +12,6 @@ import Landing from "./component/landing";
 import Home from "./pages/home-page";
 import Signup from "./pagess/signUp";
 import Login from "./pagess/logIn";
-import Signin from "./pagess/signIn";
 import Location from './location/location';
 import ContactUs from './contactpage/contactus';
 import Call from './call/call';
@@ -29,7 +28,6 @@ function App() {
         <Route path="/Home" element={<Home />} /> 
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Signin" element={<Signin />} />
         <Route path="/Location" element={<Location />} />
         <Route path="/Call" element={<Call />} />
         <Route path="/ContactUs" element={<ContactUs />} />

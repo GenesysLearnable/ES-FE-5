@@ -12,9 +12,9 @@ import coins from "../pages/home-image/coin-stack.png";
 import login from "../pages/home-image/log-in.png";
 import spanner from "../pages/home-image/icons8-spanner-24.png";
 import frame2352 from "./recources-images/Frame 2362.png";
-import resustation from "./recources-images/Group 74 (1).png";
+import frontView from "./recources-images/Front view arrangement of medical still life elements (2).png";
 
-function ResourcesSecondPage() {
+function ResourcesThirdPage() {
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event) => {
@@ -68,7 +68,7 @@ function ResourcesSecondPage() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1">
-                <Link to="/">
+                <Link to="/location">
                   <img src={location} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     My Location
@@ -92,7 +92,7 @@ function ResourcesSecondPage() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1 location-bottom-line">
-                <Link to="/">
+                <Link to="/donations">
                   <img src={coins} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Donations
@@ -106,7 +106,7 @@ function ResourcesSecondPage() {
                 {" "}
                 {}
                 <li className="location-inner-quick-section-1 location-top-line">
-                  <Link to="/">
+                  <Link to="/settings">
                     <img src={spanner} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Settings
@@ -114,7 +114,7 @@ function ResourcesSecondPage() {
                   </Link>
                 </li>
                 <li className="location-inner-quick-section-1">
-                  <Link to="/">
+                  <Link to="/landing">
                     <img src={login} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Log Out
@@ -125,7 +125,7 @@ function ResourcesSecondPage() {
             </div>
           </div>
           <div className="ResourcesFirstPage-1">
-            <img className="firstpage-image" src={resustation} alt="" />
+            <img className="firstpage-image" src={frontView} alt="" />
             <div className="firstpage">
               <img id="firstpage-image" src={frame2352} alt="" />
               <div className="inner-ResourcesFirstPage">
@@ -136,54 +136,68 @@ function ResourcesSecondPage() {
               </div>
             </div>
             <div className="firstpage-Article">
-              <p>
-                Mouth-to-mouth resuscitation is an emergency first aid technique
-                used to help someone who is not breathing or is unconscious. It
-                involves blowing air into their lungs to keep them oxygenated.
-              </p>
-              <br />
-              <p>Here are the steps for mouth-to-mouth resuscitation:</p>
+              <p>What is basic first aid?</p>
               <br />
               <p>
-                1. Check the scene: Make sure it's safe for you and the person
-                needing help.
+                Basic first aid refers to the initial assistance given to a
+                person who is injured or suddenly becomes ill. It aims to
+                preserve life, prevent the condition from worsening, and promote
+                recovery. Here are the steps for basic first aid:
               </p>
               <br />
               <p>
-                2. Check for responsiveness: Gently tap or shake the person and
-                ask if they are okay. If they don't respond, they need help.
+                1. Assess the situation: Check for any dangers to yourself and
+                the injured person before approaching.
               </p>
               <br />
               <p>
-                3. Open the airway: Tilt their head back slightly and lift their
-                chin to open the airway.
+                2. Check the person's responsiveness: Tap the person gently and
+                ask if they are okay. Look for any signs of consciousness or
+                response.
+              </p>
+              <br />
+              <p>
+                3. Call for help: If the person is seriously injured or
+                unconscious, call emergency services or ask someone nearby to do
+                so.
               </p>
               <br />
               <p>
                 {" "}
-                4. Check for breathing: Look, listen, and feel for breathing for
-                about 5-10 seconds. If they are not breathing normally, proceed
-                with rescue breaths.
+                4. Control bleeding: If there is bleeding, apply firm pressure
+                with a clean cloth or bandage to the wound to stop or slow down
+                the bleeding.
               </p>
               <br />
               <p>
-                5. Give rescue breaths: <br /> - Pinch the person's nose shut.{" "}
-                <br /> - Take a normal breath and make a tight seal over their
-                mouth. <br /> - Blow steadily into their mouth for about 1
-                second, watching for their chest to rise. <br /> - Repeat this
-                process to give 2 rescue breaths.
+                5. Treat for shock: If the person is in shock (pale, cold,
+                clammy skin, rapid heartbeat), help them lie down, elevate their
+                legs slightly, and keep them warm and calm.
               </p>
               <br />
               <p>
-                6. Check for pulse: If you don't feel a pulse, start CPR. If you
-                feel a pulse but no normal breathing, continue rescue breaths.
+                6. Provide CPR if needed: If the person is not breathing
+                normally or has no pulse, start CPR (cardiopulmonary
+                resuscitation) immediately following the steps for
+                mouth-to-mouth resuscitation and chest compressions.
               </p>
               <br />
               <p>
-                These steps are meant to keep oxygen flowing into the person's
-                lungs until professional medical help arrives. Practice and
-                training in first aid are valuable skills to have in
-                emergencies.
+                7. Immobilize injuries: If there are suspected broken bones or
+                spinal injuries, avoid moving the person unnecessarily and
+                support the injured area using splints or cushions.
+              </p>
+              <br />
+              <p>
+                8. Provide comfort: Reassure the person, keep them calm, and
+                stay with them until medical help arrives.
+              </p>
+              <br />
+              <p>
+                Remember, basic first aid skills can make a big difference in
+                emergencies, so it's good to be familiar with these steps and
+                consider taking a first aid training course for more in-depth
+                knowledge.
               </p>
               <br />
             </div>
@@ -194,4 +208,4 @@ function ResourcesSecondPage() {
   );
 }
 
-export default ResourcesSecondPage;
+export default ResourcesThirdPage;

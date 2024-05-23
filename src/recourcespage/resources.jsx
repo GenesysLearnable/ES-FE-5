@@ -163,7 +163,9 @@ function Resources() {
                     <p className="inner-res-view">
                       <span>1001</span> views
                     </p>
-                    <span className="read-more">read more...</span>
+                    <Link to="/ResourcesThirdPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -176,7 +178,9 @@ function Resources() {
                     <p className="inner-res-view">
                       <span>1001</span> views
                     </p>
-                    <span className="read-more">read more...</span>
+                    <Link to="/ResourcesFourthPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>

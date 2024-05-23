@@ -12,9 +12,9 @@ import coins from "../pages/home-image/coin-stack.png";
 import login from "../pages/home-image/log-in.png";
 import spanner from "../pages/home-image/icons8-spanner-24.png";
 import frame2352 from "./recources-images/Frame 2362.png";
-import resustation from "./recources-images/Group 74 (1).png";
+import fourthGroup25 from "./recources-images/Group 25.png";
 
-function ResourcesSecondPage() {
+function ResourcesFourthPage() {
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event) => {
@@ -68,7 +68,7 @@ function ResourcesSecondPage() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1">
-                <Link to="/">
+                <Link to="/location">
                   <img src={location} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     My Location
@@ -92,7 +92,7 @@ function ResourcesSecondPage() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1 location-bottom-line">
-                <Link to="/">
+                <Link to="/donation">
                   <img src={coins} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Donations
@@ -125,7 +125,7 @@ function ResourcesSecondPage() {
             </div>
           </div>
           <div className="ResourcesFirstPage-1">
-            <img className="firstpage-image" src={resustation} alt="" />
+            <img className="firstpage-image" src={fourthGroup25} alt="" />
             <div className="firstpage">
               <img id="firstpage-image" src={frame2352} alt="" />
               <div className="inner-ResourcesFirstPage">
@@ -136,54 +136,75 @@ function ResourcesSecondPage() {
               </div>
             </div>
             <div className="firstpage-Article">
-              <p>
-                Mouth-to-mouth resuscitation is an emergency first aid technique
-                used to help someone who is not breathing or is unconscious. It
-                involves blowing air into their lungs to keep them oxygenated.
-              </p>
-              <br />
-              <p>Here are the steps for mouth-to-mouth resuscitation:</p>
+              <p>What is basic first aid?</p>
               <br />
               <p>
-                1. Check the scene: Make sure it's safe for you and the person
-                needing help.
+                Laying a stretcher refers to the process of preparing and
+                positioning a stretcher to safely transport an injured or ill
+                person. Here are the steps for laying a stretcher:
               </p>
               <br />
               <p>
-                2. Check for responsiveness: Gently tap or shake the person and
-                ask if they are okay. If they don't respond, they need help.
+                1. Prepare the stretcher: Ensure the stretcher is unfolded and
+                ready for use. Check for any damage or defects.
               </p>
               <br />
               <p>
-                3. Open the airway: Tilt their head back slightly and lift their
-                chin to open the airway.
+                2. Position the stretcher: Place the stretcher near the person
+                who needs to be transported, ensuring there is enough space
+                around to maneuver.
+              </p>
+              <br />
+              <p>
+                3. Secure the area: Clear any obstacles or hazards around the
+                stretcher to prevent accidents during movement.
               </p>
               <br />
               <p>
                 {" "}
-                4. Check for breathing: Look, listen, and feel for breathing for
-                about 5-10 seconds. If they are not breathing normally, proceed
-                with rescue breaths.
+                4. Assess the person: Determine the best way to move the person
+                onto the stretcher based on their condition and any injuries
+                they may have.
               </p>
               <br />
               <p>
-                5. Give rescue breaths: <br /> - Pinch the person's nose shut.{" "}
-                <br /> - Take a normal breath and make a tight seal over their
-                mouth. <br /> - Blow steadily into their mouth for about 1
-                second, watching for their chest to rise. <br /> - Repeat this
-                process to give 2 rescue breaths.
+                5. Position the person: Carefully lift or roll the person onto
+                the stretcher, making sure to support their head and neck if
+                there are suspected spinal injuries.
               </p>
               <br />
               <p>
-                6. Check for pulse: If you don't feel a pulse, start CPR. If you
-                feel a pulse but no normal breathing, continue rescue breaths.
+                6. Secure the person: Use straps or restraints on the stretcher
+                to secure the person in place, especially if there is a risk of
+                movement during transport.
               </p>
               <br />
               <p>
-                These steps are meant to keep oxygen flowing into the person's
-                lungs until professional medical help arrives. Practice and
-                training in first aid are valuable skills to have in
-                emergencies.
+                7. Check comfort and safety: Ensure the person is comfortable
+                and that the stretcher is stable and balanced before moving.
+              </p>
+              <br />
+              <p>
+                8. Transport the person: With the help of others, lift and carry
+                the stretcher using proper lifting techniques to avoid strain or
+                injuries.
+              </p>
+              <br />
+              <p>
+                9. Communicate: Coordinate with your team to move the stretcher
+                smoothly and safely, especially around corners or obstacles.
+              </p>
+              <br />
+              <p>
+                10. Monitor the person: Continuously assess the person's
+                condition during transport and make any necessary adjustments to
+                ensure their well-being.
+              </p>
+              <br />
+              <p>
+                By following these steps, you can effectively lay a stretcher
+                and transport a person safely, minimizing further harm and
+                providing necessary care until they reach medical professionals.
               </p>
               <br />
             </div>
@@ -194,4 +215,4 @@ function ResourcesSecondPage() {
   );
 }
 
-export default ResourcesSecondPage;
+export default ResourcesFourthPage;

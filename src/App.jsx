@@ -24,6 +24,8 @@ import Resources from './recourcespage/resources';
 import ResourcesFirstPage from './recourcespage/resourcesFirstPage';
 import Donation from './donationpage/donation';
 import ResourcesSecondPage from './recourcespage/resourcesSecondPage';
+import ResourcesThirdPage from './recourcespage/resourcesThirdPage';
+import ResourcesFourthPage from './recourcespage/resourcesFourthPage';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
         <Route path="/Resources" element={<Resources />} />
         <Route path="/ResourcesFirstPage" element={<ResourcesFirstPage />} />
         <Route path="/ResourcesSecondPage" element={<ResourcesSecondPage />} />
+        <Route path="/ResourcesThirdPage" element={<ResourcesThirdPage />} />
+        <Route path="/ResourcesFourthPage" element={<ResourcesFourthPage />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/About" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />

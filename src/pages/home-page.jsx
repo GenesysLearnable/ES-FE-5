@@ -124,19 +124,19 @@ function Home() {
             <div className="quick-section-2">
               <div>
                 <img className="police" src={security} alt="" />
-                <button id="police">Call the police</button>
+                <a href="tel:1234567890"><button id="police">Call the police</button></a>
               </div>
               <div>
                 <img className="fire" src={firefighter} alt="" />
-                <button id="fire">Call fire service</button>
+                <a href="tel:0987654321"><button id="fire">Call fire service</button></a>
               </div>
               <div>
                 <img className="ambluance" src={british} alt="" />
-                <button id="ambluance">Call an ambulance</button>
+                <a href="tel:1122334455"><button id="ambluance">Call an ambulance</button></a>
               </div>
               <div>
                 <img className="medic" src={ems} alt="" />
-                <button id="medic">Call a medic</button>
+                <a href="tel:5566778899"><button id="medic">Call a medic</button></a>
               </div>
             </div>
           </div>
@@ -154,9 +154,11 @@ function Home() {
                   <p>Medic James</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
             <div className="contact-1">
@@ -166,9 +168,11 @@ function Home() {
                   <p>Officer Paul</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -177,7 +181,7 @@ function Home() {
             <a id="bag-p" href="">view all</a>
             <img src={bag} alt="" />
             <a id="bag-p-a" href="">Click Here</a>
-            <p id="bag-p-1">Basic  First Aid</p> 
+            <p id="bag-p-1">Basic First Aid</p>
           </div>
         </div>
       </footer>

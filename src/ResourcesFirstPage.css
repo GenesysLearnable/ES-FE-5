@@ -1,0 +1,40 @@
+.ResourcesFirstPage-1{
+    padding: 30px;
+}
+
+.firstpage{
+    display: flex;
+    margin-top: 10px;
+    color: #333333;
+}
+
+#firstpage-image{
+    position: relative;
+    bottom: 35px;
+    left: 20px;
+    width: 5%;
+    height: 5%; 
+}
+
+.inner-ResourcesFirstPage{
+    position: relative;
+    bottom: 20px;
+    padding-left: 25px;
+}
+
+.inner-firstpage{
+    font-size: 10px;
+}
+
+.inner-firstpage span{
+    color: #d20606;
+}
+
+.firstpage-Article{
+    width: 1000px;
+    padding-left: 15px;
+}
+
+.firstpage-image{
+    width: 1000px;
+}

@@ -206,20 +206,21 @@ function Home() {
             <h1>Quick call contacts</h1>
             <div className="quick-section-2">
               <div>
-                <img className="police" src={security} alt="Police" />
-                <button id="police">Call the police</button>
+                <img className="police" src={security} alt="" />
+                <a href="tel:1234567890"><button id="police">Call the police</button></a>
               </div>
               <div>
-                <img className="fire" src={firefighter} alt="Firefighter" />
-                <button id="fire">Call fire service</button>
+                <img className="fire" src={firefighter} alt="" />
+                <a href="tel:0987654321"><button id="fire">Call fire service</button></a>
               </div>
               <div>
-                <img className="ambluance" src={british} alt="Ambulance" />
-                <button id="ambluance">Call an ambulance</button>
+                <img className="ambluance" src={british} alt="" />
+                <a href="tel:1122334455"><button id="ambluance">Call an ambulance</button></a>
               </div>
               <div>
-                <img className="medic" src={ems} alt="Medic" />
-                <button id="medic">Call a medic</button>
+                <img className="medic" src={ems} alt="" />
+                <a href="tel:5566778899"><button id="medic">Call a medic</button></a>
+
               </div>
             </div>
 
@@ -267,9 +268,11 @@ function Home() {
                   <p>Medic James</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="Phone Call" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
             <div className="contact-1">
@@ -279,14 +282,17 @@ function Home() {
                   <p>Officer Paul</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="Phone Call" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
 
           <div className="bag">
+
             <a id="bag-p" href="#">
               view all
             </a>
@@ -294,6 +300,7 @@ function Home() {
             <a id="bag-p-a" href="#">
               Click Here
             </a>
+
             <p id="bag-p-1">Basic First Aid</p>
           </div>
         </div>

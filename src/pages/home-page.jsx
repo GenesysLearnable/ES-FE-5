@@ -60,7 +60,7 @@ function Home() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          console.log("User's position:", latitude, longitude); // Debugging
+          console.log("User's position:", latitude, longitude); 
           setMapCenter([latitude, longitude]);
         },
         (error) => {

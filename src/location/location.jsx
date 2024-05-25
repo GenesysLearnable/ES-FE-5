@@ -35,8 +35,96 @@ const UpdateMapCenter = ({ center }) => {
 function Location() {
   const [query, setQuery] = useState("");
   const [mapCenter, setMapCenter] = useState([6.4403026, 7.5276011]);
-  const [emergencyServices, setEmergencyServices] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const emergencyServices = [
+    {
+      position: [6.5244, 7.5186],
+      name: "Central Police Station",
+      type: "Police Station",
+    },
+    {
+      position: [6.5053, 7.5104],
+      name: "Enugu Fire Station",
+      type: "Fire Station",
+    },
+    {
+      position: [6.4942, 7.5293],
+      name: "University of Nigeria Teaching Hospital",
+      type: "Hospital",
+    },
+    {
+      position: [6.4331, 7.523],
+      name: "New Haven Police Station",
+      type: "Police Station",
+    },
+    {
+      position: [6.4361, 7.4965],
+      name: "GRA Fire Station",
+      type: "Fire Station",
+    },
+    {
+      position: [6.4525, 7.5101],
+      name: "National Orthopaedic Hospital",
+      type: "Hospital",
+    },
+    { position: [6.444, 7.5107], name: "Parklane Hospital", type: "Hospital" },
+    {
+      position: [6.50597, 7.23426],
+      name: "Bishop Shanahan Hospital - Nsukka",
+      type: "Hospital",
+    },
+    {
+      position: [6.27002, 7.30168],
+      name: "Alpha Hospital-Trans Ekulu-6-8 3rd Avenue-Enugu",
+      type: "Hospital",
+    },
+    {
+      position: [6.27096, 7.30372],
+      name: "Balm of Gilead Specialist Hospital-Maryland,12-Prince-Okam-Street,Enugu",
+      type: "Hospital",
+    },
+    {
+      position: [6.27048, 7.31265],
+      name: "Neo Hospital & Dialysis Centre-27 Nza Street,Enugu,00000",
+      type: "Hospital",
+    },
+    {
+      position: [6.26359, 7.30493],
+      name: "Niger Foundation Hospital-5 Presidential Close,Enugu,",
+      type: "Hospital",
+    },
+    {
+      position: [6.28249, 7.30207],
+      name: "Memfys HospitalPlot 13 Trans-Ekulu Pocket Layout,Enugu-Onitsha Expressway,Enugu, 00000",
+      type: "Hospital",
+    },
+    {
+      position: [6.27533, 7.29343],
+      name: "The Eye Specialists Hospital (TESH) 11 Church View, Umuomanta Avenue, Enugu, 00000",
+      type: "Hospital",
+    },
+    {
+      position: [6.27291, 7.31237],
+      name: "Childlife Hospital-163 Upper Chime Avenue,Enugu",
+      type: "Hospital",
+    },
+    {
+      position: [6.26449, 7.31526],
+      name: "Eastside Hospital Enugu-26 Ezillo Avenue,Enugu",
+      type: "Hospital",
+    },
+    {
+      position: [6.28262, 7.30031],
+      name: "Hilltop Orthopaedic Hospital Enugu-Onitsha Expy, Enugu",
+      type: "Hospital",
+    },
+    {
+      position: [6.4475, 7.505],
+      name: "Abakpa Police Station",
+      type: "Police Station",
+    },
+  ];
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -52,20 +140,6 @@ function Location() {
     } else {
       console.error("Geolocation is not supported by this browser.");
     }
-  }, []);
-
-  useEffect(() => {
-    const fetchEmergencyServices = async () => {
-      try {
-        const response = await fetch("");
-        const data = await response.json();
-        setEmergencyServices(data.services);
-      } catch (error) {
-        console.error("Error fetching emergency services:", error);
-      }
-    };
-
-    fetchEmergencyServices();
   }, []);
 
   const handleInputChange = (event) => {
@@ -100,7 +174,8 @@ function Location() {
     selectedCategory === "All"
       ? emergencyServices
       : emergencyServices.filter(
-          (service) => service.type.toLowerCase() === selectedCategory.toLowerCase()
+          (service) =>
+            service.type.toLowerCase() === selectedCategory.toLowerCase()
         );
 
   return (
@@ -160,8 +235,7 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1">
-
-                <Link to="/Call">
+                <Link to="/Calls">
                   <img src={phone} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Calls
@@ -169,8 +243,7 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1 location-bottom-line">
-
-                <Link to="/Donation">
+                <Link to="/Donations">
                   <img src={coins} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Donations
@@ -183,7 +256,6 @@ function Location() {
               <ul>
                 <li className="location-inner-quick-section-1 location-top-line">
                   <Link to="/Settings">
-
                     <img src={spanner} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Settings
@@ -203,18 +275,43 @@ function Location() {
           </div>
           <div>
             <div className="location-BTN">
-              <button className="location-BTN-1" onClick={() => handleCategoryChange("All")}>All</button>
-              <button className="location-BTN-2" onClick={() => handleCategoryChange("Ambulance")}>Ambulance</button>
-              <button className="location-BTN-3" onClick={() => handleCategoryChange("Fire Service")}>Fire Service</button>
-              <button className="location-BTN-4" onClick={() => handleCategoryChange("Police")}>Police stations</button>
-              <button className="location-BTN-5" onClick={() => handleCategoryChange("Medic")}>Medic</button>
+              <button
+                className="location-BTN-1"
+                onClick={() => handleCategoryChange("All")}
+              >
+                All
+              </button>
+              <button
+                className="location-BTN-2"
+                onClick={() => handleCategoryChange("Hospital")}
+              >
+                Ambulance
+              </button>
+              <button
+                className="location-BTN-3"
+                onClick={() => handleCategoryChange("Fire Station")}
+              >
+                Fire Service
+              </button>
+              <button
+                className="location-BTN-4"
+                onClick={() => handleCategoryChange("Police Station")}
+              >
+                Police stations
+              </button>
+              <button
+                className="location-BTN-5"
+                onClick={() => handleCategoryChange("Hospital")}
+              >
+                Medic
+              </button>
             </div>
             {/* Map container */}
             <MapContainer
               className="map-container"
               center={mapCenter}
-              zoom={9} 
-              style={{ height: "540px", width: "100%" }}
+              zoom={13}
+              style={{ height: "540px", width: "91%" }}
             >
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -223,16 +320,14 @@ function Location() {
               <UpdateMapCenter center={mapCenter} />
 
               {filteredServices.map((service, index) => (
-                <Marker
-                  key={index}
-                  position={[service.latitude, service.longitude]}
-                >
+                <Marker key={index} position={service.position}>
                   <Popup>
                     {service.name} - {service.type}
                   </Popup>
                 </Marker>
               ))}
 
+              {/* User's current location marker */}
               <Marker position={mapCenter}>
                 <Popup>Your current location</Popup>
               </Marker>

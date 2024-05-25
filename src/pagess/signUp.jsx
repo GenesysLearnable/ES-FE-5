@@ -8,9 +8,11 @@ import logo from "../pagess/sing-up-images/saveme logo 1.png";
 function Signup() {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phoneNumber: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    admin: false
   });
 
   const [error, setError] = useState('');
@@ -22,10 +24,20 @@ function Signup() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setSuccess('');
+
+    if (!validateEmail(formData.email)) {
+      setError('Invalid email format');
+      return;
+    }
 
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
@@ -37,12 +49,15 @@ function Signup() {
 
       const response = await axios.post('https://es-be-5-save-me.onrender.com/api/v1/user/signup', {
         username: formData.name,
+        useremail: formData.email,
         phoneNumber: formData.phoneNumber,
         password: formData.password
       });
 
       console.log("API response:", response.data);
-      navigate('/signin', { state: { name: formData.name, phoneNumber: formData.email } });
+      setSuccess('Sign up successful. Redirecting to login page...');
+      
+      navigate('/login', { state: { name: formData.name, email: formData.email } });
       
     } catch (error) {
       console.error("Error during signup:", error);
@@ -69,6 +84,17 @@ function Signup() {
                 name="name"
                 placeholder="Full name"
                 value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
                 onChange={handleChange}
                 required
               />

@@ -172,7 +172,7 @@ function Donation() {
             <div>
               <ul>
                 <li className="location-inner-quick-section-1 location-top-line">
-                  <Link to="/">
+                  <Link to="/settings">
                     <img src={spanner} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Settings

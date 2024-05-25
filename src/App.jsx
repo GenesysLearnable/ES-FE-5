@@ -20,6 +20,7 @@ import Call from './call/call';
 import NotFoundPage from "./pages/NotFoundPage";
 import Resources from './recourcespage/resources';
 import Donation from './donationpage/donation';
+import Settings from './settings/settings';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Settings" element={<Settings />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

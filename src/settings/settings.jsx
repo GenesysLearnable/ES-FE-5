@@ -27,8 +27,8 @@ function Settings ()  {
         </li>
       </ul>
 
-      <div className="search-container-1">
-        <img className="search-icon-1" src={searchIcon} alt="Search" />
+      <div className="search-container-1-settings">
+        <img className="search-icon-1-settings" src={searchIcon} alt="Search" />
         <input
           type="text"
           placeholder="Find your nearest emergency station or contact"
@@ -39,13 +39,14 @@ function Settings ()  {
         <img id="bell-1" src={bell} alt="" />
         <a href="">
           <img src={portrait} alt="" />
+          
         </a>
       </div>
     </nav>
 
     <section>
-      <div className="location-quick-section">
-        <div className="location-inner-quick-section">
+      <div className="location-quick-section-settings">
+        <div className="location-inner-quick-section-set">
           <ul>
             <li className="location-inner-quick-section-1">
               <Link to="/Home">
@@ -108,7 +109,8 @@ function Settings ()  {
             </ul>
           </div>
         </div>
-        <div className="profile-container">
+        <br/>
+        <div className="profile-container-settings">
       <div className="profile-header">
         <img src="src/settings/profilepic.png" alt="Profile" className="profile-picture" />
         <button className="edit-profile-button">Edit profile</button>

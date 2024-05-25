@@ -24,11 +24,11 @@ nav{
   list-style: none;
 }
 
-.search-container-1 {
+.search-container-1-settings {
   position: relative;
   right: 190px;
 }
-.search-container-1 input {
+.search-container-1-settings input {
   width: 250%;
   height: 70%;
   margin-top: 10px;
@@ -41,7 +41,7 @@ nav{
   border-color: #d1d1d1;
 }
 
-.search-icon-1 {
+.search-icon-1-settings {
   position: absolute;
   left: 400px; 
   top: 50%;
@@ -50,7 +50,7 @@ nav{
   height: 12px;
 }
 
-.search-container-1 input::placeholder{
+.search-container-1-settings input::placeholder{
   padding-left: 20px;
   color: #333333;
 }
@@ -65,13 +65,12 @@ nav{
   margin-bottom: 10px;
 }
 
-/* section */
 
-.location-quick-section{
+.location-quick-section-settings{
     display: flex;
   }
   
-  .location-inner-quick-section{ 
+  .location-inner-quick-section-set{ 
     width: 350px;
     padding-left: 80px;
     padding-top: 75px;
@@ -136,21 +135,21 @@ nav{
 .location-inner-quick-section{
   width: 30%;
 }
-.location-inner-quick-section {
+/*.location-inner-quick-section-set {
   border-right: 0.5px solid #c8c2c2;
   width: auto;
   padding: 40px;
-}
+}*/
 
-.profile-container {
+.profile-container-settings {
   border: solid 0.5px #c8c2c2;
   padding: 10px;
-  margin-left: 150px;
+  margin-left: 90px;
   width: 450px;
   float: right;
   margin-right: 20px;
 }
-.profile-container h2{
+.profile-container-settings h2{
   margin: 0;
   padding-bottom: 2px;
   border-bottom: solid 1px red;
@@ -211,7 +210,7 @@ nav{
 }
 
 .stat-value {
-  color: red;
+  color: #d20606;
   font-size: large; 
   font-weight: bold;
   float: left;

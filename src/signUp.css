@@ -21,7 +21,7 @@ body{
   justify-content: center;
   width: 900px;
   margin-left: 250px;
-  height: 611px;
+  height: 691px;
 }
 
 #para{
@@ -60,14 +60,14 @@ body{
 }
 
 .sign-up-details h1{
-  padding-top: 50px;
+  padding-top: 30px;
   padding-left: 90px;
   font-size: 30px;
   color: black;
 }
 
 .sign-up-details form{
-  padding-top: 50px;
+  padding-top: 10px;
   padding-left: 90px;
   
 }
@@ -96,10 +96,11 @@ body{
 
 .sign-up-button{
   background-color: #d20606;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: 80px;
   border-radius: 20px;
   width: 100px;
+  padding-right: 90px;
 }
 
 .sign-up-details form p{
@@ -108,5 +109,9 @@ body{
 }
 
 #here{
+  color: #d20606;
+}
+
+.error-message{
   color: #d20606;
 }

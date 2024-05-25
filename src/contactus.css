@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); 
+*{
+  
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+}
+
+.App {
+  text-align: center;
+  background-color: white;
+}
+
+.navbar {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-top: 10px;
+  left: 390px;
+}
+.nav-bar img{
+  padding-left: 10px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end; 
+  margin: 0; 
+  margin-top: 10px;
+  padding: 0; 
+}
+
+.navbar li {
+  list-style-type: none;
+  text-align: right;
+  color: black;
+  margin: 0 5px;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.BTN button{
+  border-radius: 10px;
+  transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s; 
+}
+
+.BTN button:hover {
+  background-color: #d66c6c; 
+  border-color: #a20606; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
+}
+
+
+.header {
+  background-color: #d20606;
+  padding: 20px;
+  text-align: center;
+  height: 20vh;
+}
+
+.logo {
+  float: left;
+  margin-right: 15px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.card {
+  width: 220px;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #d20606;
+  overflow: hidden;
+  transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s; 
+
+}
+
+.card p{
+  color: black;
+  text-align: left;
+}
+
+.card h3{
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  padding: 0;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  float: left;
+}
+.card:hover {
+  background-color: #d66c6c;
+  border-color: #a20606;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+

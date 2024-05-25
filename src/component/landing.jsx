@@ -1,78 +1,95 @@
-import { Link } from "react-router-dom";
-import saveme from "../image/saveme logo 2.png";
-import paramedic from "../image/from paramedic.png";
-import Ellipse from "../image/Ellipse 1.png";
-import Ellipses from "../image/Ellipse 2.png";
-import material from "../image/Vector (7).png";
-import victor from "../image/Vector (6).png";
-import police from "../image/Vector (8).png";
-import hospital from "../image/Vector (9).png";
-import ambluance from "../image/Vector (10).png";
-import rectangle from "../image/Rectangle 158.png";
-import rectangles from "../image/Rectangle 153.png";
-import imagee from "../image/image 27.png";
-import imagees from "../image/image 25.png";
-import multiethnic from "../image/multiethnic.png";
-import international from "../image/international.png";
-import angle from "../image/Rectangle 159.png";
-import imagess from "../image/image 26.png";
-import icons from '../image/icons8-search-24.png'
-import iconss from '../image/icons8-dropdown-30.png'
-import location from '../image/icons8-location-24.png'
-import person from '../image/icons8-person-64.png'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import saveme from '../image/saveme logo 2.png';
+import paramedic from '../image/from paramedic.png';
+import Ellipse from '../image/Ellipse 1.png';
+import Ellipses from '../image/Ellipse 2.png';
+import material from '../image/Vector (7).png';
+import victor from '../image/Vector (6).png';
+import police from '../image/Vector (8).png';
+import hospital from '../image/Vector (9).png';
+import ambluance from '../image/Vector (10).png';
+import rectangle from '../image/Rectangle 158.png';
+import rectangles from '../image/Rectangle 153.png';
+import imagee from '../image/image 27.png';
+import imagees from '../image/image 25.png';
+import multiethnic from '../image/multiethnic.png';
+import international from '../image/international.png';
+import angle from '../image/Rectangle 159.png';
+import imagess from '../image/image 26.png';
+import icons from '../image/icons8-search-24.png';
+import iconss from '../image/icons8-dropdown-30.png';
+import location from '../image/icons8-location-24.png';
+import person from '../image/icons8-person-64.png';
 
 function Landing() {
+  const [email, setEmail] = useState('');
+  const [showParamedicInfo, setShowParamedicInfo] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    alert(`Subscribed with ${email}`);
+    setEmail('');
+  };
+
+  const toggleParamedicInfo = () => {
+    setShowParamedicInfo(!showParamedicInfo);
+  };
+
   return (
     <div className="home">
       <div className="nav-bar">
-        <a href=""><img src={saveme}  alt=""  /></a>
+        <a href="#"><img src={saveme} alt="" /></a>
         <div className="nav-bar-1">
           <ul>
-          <li><Link to="/Home" as="a">Home</Link></li>
-          <li><Link to="/About" as="a">About</Link></li>
-          <li><Link to="/ContactUs" as="a">Contact Us</Link></li>
-          <li><Link to="/Login" as="a">Login</Link></li>
+            <li><Link to="/Home">Home</Link></li>
+            <li><Link to="/About">About</Link></li>
+            <li><Link to="/ContactUs">Contact Us</Link></li>
+            <li><Link to="/Login">Login</Link></li>
           </ul>
         </div>
         <span className="BTN">
-           
-        <Link to="/Signup"><button type="submit">Sign Up</button></Link>
-          {/* <button>
-            {" "}
-            <a href="" target="_blank" rel="noopener noreferrer">
-              {" "}
-              Sign Up{" "}
-            </a>
-          </button> */}
+          <Link to="/Signup"><button type="submit">Sign Up</button></Link>
         </span>
       </div>
 
       <div className="hero-section">
         <div className="inner-section">
           <h1>
-            Swift Response Is The{" "}
-            <span className="hallmark">Hallmark Of Efficiency.</span>
+            Swift Response Is The <span className="hallmark">Hallmark Of Efficiency.</span>
           </h1>
-
           <br />
-
           <p>
             Locate the nearest emergency service in Enugu, chat with a doctor,
             track your journey, visit hospitals, all can be done with SAVE ME!
           </p>
-
           <br />
-
-          <div>
-            <div className="paramedic">
-                <span id="medics"> <img src={person} alt="" /> Find a Paramedic <img src={iconss} alt="" /> </span> <span id="location"> <img src={location} alt="" /> <a href="https://www.google.com/maps/@9.0338725,8.677457,6z?entry=ttu">Location</a> <img src={iconss} alt="" /></span> <button id="btn"><img src={icons} alt="" /></button>
+          <div className="paramedic">
+            <span id="medics" onClick={toggleParamedicInfo}>
+              <img src={person} alt="" /> Find a Paramedic <img src={iconss} alt="" />
+            </span>
+            {showParamedicInfo && (
+              <div className="paramedic-info">
+              <button > <Link className='paramedi-info-1' to="/Call">Call</Link> </button>
+              <button> <Link className='paramedi-info-1' to="/Location">Location</Link></button>
+              <button> <Link className='paramedi-info-1' to="/Home">Home</Link></button>
             </div>
+            )
+            
+            }
+            <span id="location">
+              <img src={location} alt="" />
+              <a href="https://www.google.com/maps/@9.0338725,8.677457,6z?entry=ttu">Location</a>
+              <img src={iconss} alt="" />
+            </span>
+            <button id="btn">
+              <img src={icons} alt="" />
+            </button>
           </div>
           <button className="BTN-1">
-            <a href="">Get Started</a>
+            <Link to="/GetStarted">Get Started</Link>
           </button>
         </div>
-
         <div className="hero-section-1">
           <div className="hero-section-2">
             <img width={100} src={Ellipse} alt="" />
@@ -104,10 +121,7 @@ function Landing() {
             <div className="services">
               <img src={material} alt="" />
               <h3>Fire Department</h3>
-              <p>
-                We provide fire suppression, rescue operations, and emergency
-                medical services.
-              </p>
+              <p>We provide fire suppression, rescue operations, and emergency medical services.</p>
             </div>
             <div className="services services-1">
               <img src={victor} alt="" className="color-change" />
@@ -121,10 +135,7 @@ function Landing() {
             <div className="services">
               <img src={police} alt="" />
               <h3>Police Station</h3>
-              <p>
-                Police stations provide law enforcement, crime investigation,
-                and public safety services to communities.
-              </p>
+              <p>Police stations provide law enforcement, crime investigation, and public safety services to communities.</p>
             </div>
           </div>
           <div className="bottom-2">
@@ -191,8 +202,8 @@ function Landing() {
             <span id="line">
               Call our <span id="call">emergency</span> line
             </span>
-            <button>
-              <span id="underline">222</span>
+            <button className='underline'>
+            <li><Link to="/Call"><span id="underline">222</span></Link></li>
             </button>
           </div>
         </div>
@@ -201,7 +212,7 @@ function Landing() {
           <div className="inner-section-5">
             <div>
               <h2>
-                Subscribe To Our <span id="newsletter"> Newsletter</span>{" "}
+                Subscribe To Our <span id="newsletter"> Newsletter</span>
               </h2>
               <p>
                 Ensure continuous access to critical assistance and support by
@@ -211,8 +222,15 @@ function Landing() {
             </div>
 
             <div className="subscribe">
-              <input type="email" placeholder="Enter a valid email address" />
-              <button>Subscribe</button>
+              <form onSubmit={handleSubscribe}>
+                <input
+                  type="email"
+                  placeholder="Enter a valid email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button type="submit">Subscribe</button>
+              </form>
             </div>
           </div>
         </div>
@@ -221,15 +239,19 @@ function Landing() {
       <footer>
         <div className="footer-1">
           <div className="inner-footer">
-            <form action="">
+            <form>
               <input
                 type="text"
                 placeholder="Your Name"
                 className="input-form"
               />
-              <input type="email" placeholder="Email" className="input-form" />
               <input
-                type="message"
+                type="email"
+                placeholder="Email"
+                className="input-form"
+              />
+              <input
+                type="text"
                 placeholder="Message"
                 id="message"
                 className="input-form"

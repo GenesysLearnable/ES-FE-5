@@ -160,7 +160,8 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1">
-                <Link to="/Calls">
+
+                <Link to="/Call">
                   <img src={phone} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Calls
@@ -168,7 +169,8 @@ function Location() {
                 </Link>
               </li>
               <li className="location-inner-quick-section-1 location-bottom-line">
-                <Link to="/Donations">
+
+                <Link to="/Donation">
                   <img src={coins} alt="" />{" "}
                   <span className="location-inner-quick-section-1-1">
                     Donations
@@ -181,6 +183,7 @@ function Location() {
               <ul>
                 <li className="location-inner-quick-section-1 location-top-line">
                   <Link to="/Settings">
+
                     <img src={spanner} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Settings

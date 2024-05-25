@@ -7,7 +7,7 @@ import logo from "./sing-up-images/saveme logo 1.png";
 
 function Login() {
   const [formData, setFormData] = useState({
-    phoneNumber: '',
+    email: '',
     password: ''
   });
 
@@ -62,11 +62,11 @@ function Login() {
             <form onSubmit={handleSubmit}>
               <div>
                 <input
-                  type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  placeholder="Phone number"
-                  value={formData.phoneNumber}
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
                   onChange={handleChange}
                   required
                 />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -42,7 +42,9 @@ L.Marker.prototype.options.icon = DefaultIcon;
 // Custom hook to update the map center
 const UpdateMapCenter = ({ center }) => {
   const map = useMap();
-  map.setView(center);
+  useEffect(() => {
+    map.setView(center);
+  }, [center, map]);
   return null;
 };
 
@@ -50,6 +52,30 @@ function Home() {
   const [query, setQuery] = useState("");
   const [mapCenter, setMapCenter] = useState([6.5244, 7.5186]);
   const [searchResult, setSearchResult] = useState(null);
+  const [showAllContacts, setShowAllContacts] = useState(true);
+
+  // Fetch user's current location
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          console.log("User's position:", latitude, longitude); 
+          setMapCenter([latitude, longitude]);
+        },
+        (error) => {
+          console.error("Error fetching user location:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  }, []);
+
+  const toggleContacts = (event) => {
+    event.preventDefault();
+    setShowAllContacts(!showAllContacts);
+  };
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
@@ -59,12 +85,19 @@ function Home() {
     if (query.trim() === "") return;
 
     try {
-      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}`);
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?format=json&q=${query} Enugu`
+      );
       const data = await response.json();
       if (data.length > 0) {
         const { lat, lon } = data[0];
         setMapCenter([parseFloat(lat), parseFloat(lon)]);
-        setSearchResult({ lat: parseFloat(lat), lon: parseFloat(lon), display_name: data[0].display_name });
+        setSearchResult({
+          lat: parseFloat(lat),
+          lon: parseFloat(lon),
+          display_name: data[0].display_name,
+        });
+
       }
     } catch (error) {
       console.error("Error fetching geolocation:", error);
@@ -127,16 +160,18 @@ function Home() {
           </li>
         </ul>
 
-        <div className="search-container">
-          <img className="search-icon" src={searchIcon} alt="Search" />
-          <input
-            type="text"
-            placeholder="Emergency contact...."
-            value={query}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-          />
-        </div>
+        <a className="home-search-container" href="#" onClick={handleSearch}>
+          <div className="search-container">
+            <img className="search-icon" src={searchIcon} alt="Search" />
+            <input
+              type="text"
+              placeholder="Emergency contact...."
+              value={query}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+        </a>
 
         <div className="nav-IMG">
           <img id="bell" src={bell} alt="Bell" />
@@ -206,20 +241,28 @@ function Home() {
             <h1>Quick call contacts</h1>
             <div className="quick-section-2">
               <div>
-                <img className="police" src={security} alt="Police" />
-                <button id="police">Call the police</button>
+                <img className="police" src={security} alt="" />
+                <a href="tel:1234567890">
+                  <button id="police">Call the police</button>
+                </a>
               </div>
               <div>
-                <img className="fire" src={firefighter} alt="Firefighter" />
-                <button id="fire">Call fire service</button>
+                <img className="fire" src={firefighter} alt="" />
+                <a href="tel:0987654321">
+                  <button id="fire">Call fire service</button>
+                </a>
               </div>
               <div>
-                <img className="ambluance" src={british} alt="Ambulance" />
-                <button id="ambluance">Call an ambulance</button>
+                <img className="ambluance" src={british} alt="" />
+                <a href="tel:1122334455">
+                  <button id="ambluance">Call an ambulance</button>
+                </a>
               </div>
               <div>
-                <img className="medic" src={ems} alt="Medic" />
-                <button id="medic">Call a medic</button>
+                <img className="medic" src={ems} alt="" />
+                <a href="tel:5566778899">
+                  <button id="medic">Call a medic</button>
+                </a>
               </div>
             </div>
 
@@ -244,13 +287,15 @@ function Home() {
                 </Marker>
               ))}
 
-              {searchResult && (
+              {searchResult &&(
                 <Marker position={[searchResult.lat, searchResult.lon]}>
-                  <Popup>
-                    {searchResult.display_name}
-                  </Popup>
+                  <Popup>{searchResult.display_name}</Popup>
                 </Marker>
               )}
+
+              <Marker position={mapCenter}>
+                <Popup>Your current location</Popup>
+              </Marker>
             </MapContainer>
           </div>
         </div>
@@ -262,38 +307,94 @@ function Home() {
           <div>
             <div className="contact-1">
               <div className="inner-contact-1 ambstaff">
-                <img src={ambStaff} alt="Ambulance Staff" />
+                <img
+                  className="inner-contact-1-image"
+                  src={ambStaff}
+                  alt="Ambulance Staff"
+                />
                 <div>
                   <p>Medic James</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="Phone Call" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
             <div className="contact-1">
               <div className="inner-contact-1">
-                <img src={pilot} alt="Pilot" />
+                <img
+                  className="inner-contact-1-image"
+                  src={pilot}
+                  alt="Pilot"
+                />
                 <div>
                   <p>Officer Paul</p>
                   <p id="number">+2348045679876</p>
                 </div>
-                <button>
-                  <img src={phoneCall} alt="Phone Call" />
-                </button>
+                <a href="tel:+2348045679876">
+                  <button>
+                    <img src={phoneCall} alt="" />
+                  </button>
+                </a>
               </div>
             </div>
+            {showAllContacts && (
+              <>
+                <div className="contact-1">
+                  <div className="inner-contact-1">
+                    <img
+                      className="inner-contact-1-image"
+                      src={pilot}
+                      alt="Pilot"
+                    />
+                    <div>
+                      <p>Fireman Jake</p>
+                      <p id="number">+2348045679876</p>
+                    </div>
+                    <a href="tel:+2348045679876">
+                      <button>
+                        <img src={phoneCall} alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div className="contact-1">
+                  <div className="inner-contact-1">
+                    <img
+                      className="inner-contact-1-image"
+                      src={pilot}
+                      alt="Pilot"
+                    />
+                    <div>
+                      <p>Ambulance</p>
+                      <p id="number">+2348045679876</p>
+                    </div>
+                    <a href="tel:+2348045679876">
+                      <button>
+                        <img src={phoneCall} alt="" />
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
 
           <div className="bag">
-            <a id="bag-p" href="#">
-              view all
-            </a>
+            <div>
+              <a id="bag-p" href="#" onClick={toggleContacts}>
+                {showAllContacts ? "Hide" : "View all"}
+              </a>
+            </div>
+
             <img src={bag} alt="Bag" />
             <a id="bag-p-a" href="#">
               Click Here
             </a>
+
             <p id="bag-p-1">Basic First Aid</p>
           </div>
         </div>
@@ -303,3 +404,5 @@ function Home() {
 }
 
 export default Home;
+
+

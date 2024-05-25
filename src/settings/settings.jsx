@@ -39,6 +39,7 @@ function Settings ()  {
         <img id="bell-1" src={bell} alt="" />
         <a href="">
           <img src={portrait} alt="" />
+          
         </a>
       </div>
     </nav>

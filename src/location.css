@@ -29,15 +29,14 @@ nav {
 }
 .search-container-1 input {
   width: 250%;
-  height: 70%;
+  height: 40px;
   margin-top: 10px;
-  padding-left: 10px;
+  padding-left: 20px;
   background: transparent;
   color: #333333;
-  outline: none;
+  outline: none; 
   border-radius: 20px;
-  outline: none;
-  border-color: #d1d1d1;
+  border: 1px solid #d1d1d1;
 }
 
 .search-icon-1 {
@@ -118,6 +117,7 @@ section {
   margin-right: 50px;
   background-color: #d3d3d3;
   color: #333333;
+  width: 160px;
 }
 
 .location-BTN-1:hover {
@@ -129,6 +129,7 @@ section {
   margin-right: 50px;
   background-color: #d3d3d3;
   color: #333333;
+  width: 160px;
 }
 
 .location-BTN-2:hover {
@@ -140,6 +141,7 @@ section {
   margin-right: 50px;
   background-color: #d3d3d3;
   color: #333333;
+  width: 160px;
 }
 
 .location-BTN-3:hover {
@@ -151,6 +153,7 @@ section {
   margin-right: 50px;
   background-color: #d3d3d3;
   color: #333333;
+  width: 160px;
 }
 
 .location-BTN-4:hover {
@@ -162,6 +165,7 @@ section {
   margin-right: 50px;
   background-color: #d3d3d3;
   color: #333333;
+  width: 160px;
 }
 
 .location-BTN-5:hover {

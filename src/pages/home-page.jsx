@@ -392,7 +392,7 @@ function Home() {
 
             <img src={bag} alt="Bag" />
             <a id="bag-p-a" href="#">
-              Click Here
+              {/* Click Here */}
             </a>
 
             <p id="bag-p-1">Basic First Aid</p>

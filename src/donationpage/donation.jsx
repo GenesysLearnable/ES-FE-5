@@ -57,7 +57,7 @@ function Donation() {
         const web3 = new Web3(provider);
         const accounts = await web3.eth.getAccounts();
         setAccount(accounts[0]);
-        setError(''); // Clear any previous errors
+        setError(''); 
       } catch (error) {
         console.error("MetaMask connection error:", error);
         setError('Failed to connect MetaMask. Please try again.');
@@ -75,17 +75,18 @@ function Donation() {
         const web3 = new Web3(provider);
         const accounts = await web3.eth.getAccounts();
 
-        // Specify donation amount in Ether (adjust accordingly)
-        const amountInEther = '0.01';
+        
+        const amountInEther = '1000.00';
         const amountInWei = web3.utils.toWei(amountInEther, 'ether');
 
         await web3.eth.sendTransaction({
           from: accounts[0],
-          to: 'YOUR_RECEIVER_ADDRESS', // Replace with your donation receiver address
+          to: 'YOUR_RECEIVER_ADDRESS', 
           value: amountInWei
         });
 
-        setDonationAmount(donationAmount + parseFloat(amountInEther) * 1000); // Adjust the calculation based on your goal
+        setDonationAmount(donationAmount + parseFloat(amountInEther) * 10000); 
+
       } catch (error) {
         console.error("Donation transaction error:", error);
         setError('Failed to process the donation. Please try again.');
@@ -172,7 +173,7 @@ function Donation() {
             <div>
               <ul>
                 <li className="location-inner-quick-section-1 location-top-line">
-                  <Link to="/">
+                  <Link to="/settings">
                     <img src={spanner} alt="" />{" "}
                     <span className="location-inner-quick-section-1-1">
                       Settings
@@ -239,7 +240,7 @@ function Donation() {
                     <div className="donation-stats-3">
                       {" "}
                       <span id="donation-five">5</span>{" "}
-                      <span id="accepted">Major currencies accepted</span>{" "}
+                      <span id="accepted">Major currencies</span>{" "}
                       <span id="accepted-1">accepted</span>
                     </div>
                   </div>
@@ -250,7 +251,9 @@ function Donation() {
                   </button>
                 ) : (
                   <button className="donate-now" onClick={connectMetaMask}>
+
                    Donate Now
+
                   </button>
                 )}
                 {account && (
@@ -261,7 +264,7 @@ function Donation() {
                 {error && <p style={{ color: 'red' }}>{error}</p>}
               </div>
             </div>
-            <div>
+            <div className="crowdfunding-content">
               <div className="crowdfunding">
                 <h5>Completed crowdfundings</h5>
                 <p>Goal reached !</p>
@@ -290,6 +293,7 @@ function Donation() {
     </div>
   );
 }
+
 
 export default Donation;
 
@@ -591,3 +595,4 @@ export default Donation;
 // }
 
 // export default Donation;
+

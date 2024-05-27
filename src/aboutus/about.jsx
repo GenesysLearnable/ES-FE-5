@@ -11,7 +11,7 @@ function About() {
         <img src={saveme}  alt="Home Logo"  />
       </a>
       
-      <ul>
+      <ul className='top-about-us'>
       <li><Link to="/" as="a">Home</Link></li>
           <li><Link to="/About" as="a">About</Link></li>
           <li><Link to="/ContactUs" as="a">Contact Us</Link></li>
@@ -50,6 +50,7 @@ function About() {
       <section className="info-section">
         <div className="info-column">
           <h2>Our Vision</h2>
+          <br/>
           <p>"Our vision at Save Me is to provide swift, reliable, and compassionate emergency assistance to all in need,
              ensuring the safety and well-being of our communities."</p>
         </div>

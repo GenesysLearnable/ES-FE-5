@@ -15,6 +15,7 @@ body, html {
     background-color: white;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 130%;
   }
 
   .navbar ul {
@@ -31,6 +32,10 @@ body, html {
   }
   .navbar a:hover {
     color: red;
+  }
+  .top-about-us{
+    margin: 0;
+    margin-right: 0;
   }
   
   .signup-btn {
@@ -119,44 +124,50 @@ body, html {
     line-height: 1.5;
   }
   
-  
   .info-section {
     display: flex;
-    justify-content: space-around;
-    padding: 2rem;
     flex-wrap: wrap;
-    background-color: red;
-    margin: 1rem
+    align-items: center;
+    padding: 2rem;
+    background-color: #8B0000;
+    margin: 1rem;
+  justify-content: space-between;
+  }
+  
+  
+  .info-column {
+    width: calc(33.333% - 40px);
+    flex: 1;
+    color: white;
+    /* margin-right: 20px; */
+    margin: 0;
   }
   
   .info-column h2 {
+    font-size: 24px;
     color: white;
     text-align: center;
+    margin-bottom: 10px;
   }
   
-  .info-column {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem;
-  background-color: red;
-  margin: 0rem;
-  width: 300px;
-  height: 300px;
-  overflow-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: background-color 0.3s, box-shadow 0.3s; /* add transition effect */
-  }
-
   .info-column p {
+    font-size: 16px;
     text-align: justify;
   }
+
+  .info-column, .info-section{
+    margin-right: 0;
+  }
+  
 
   .info-column:hover {
     background-color: #8B0000; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
   }
   
+  .info-section .info-column:last-child {
+    margin-right: 0;
+  }
   
   .contact-form {
     max-width: 500px;

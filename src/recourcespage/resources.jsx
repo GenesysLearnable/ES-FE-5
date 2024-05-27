@@ -130,8 +130,12 @@ function Resources() {
                   <img className="res-image26" src={frame2362} alt="" />
                   <div className="inner-res-group26">
                     <p>Dr. John</p>
-                    <p className="inner-res-view"><span>1001</span> views</p>
-                    <span className="read-more">read more...</span>
+                    <p className="inner-res-view">
+                      <span>1001</span> views
+                    </p>
+                    <Link to="/ResourcesFirstPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -141,8 +145,12 @@ function Resources() {
                   <img className="res-image12" src={frame2362} alt="" />
                   <div className="inner-res-group26">
                     <p>Dr. John</p>
-                    <p className="inner-res-view"><span>1001</span> views</p>
-                    <span className="read-more">read more...</span>
+                    <p className="inner-res-view">
+                      <span>1001</span> views
+                    </p>
+                    <Link to="/ResourcesSecondPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -152,8 +160,12 @@ function Resources() {
                   <img className="res-image14" src={frame2362} alt="" />
                   <div className="inner-res-group26">
                     <p>Dr. John</p>
-                    <p className="inner-res-view"><span>1001</span> views</p>
-                    <span className="read-more">read more...</span>
+                    <p className="inner-res-view">
+                      <span>1001</span> views
+                    </p>
+                    <Link to="/ResourcesThirdPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -163,8 +175,12 @@ function Resources() {
                   <img className="res-image13" src={frame2362} alt="" />
                   <div className="inner-res-group26">
                     <p>Dr. John</p>
-                    <p className="inner-res-view"><span>1001</span> views</p>
-                    <span className="read-more">read more...</span>
+                    <p className="inner-res-view">
+                      <span>1001</span> views
+                    </p>
+                    <Link to="/ResourcesFourthPage">
+                      <span className="read-more">read more...</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -188,7 +204,7 @@ function Resources() {
                     <p className="paul">Dr. Paul</p>
                   </div>
                   <button>Read</button>
-                </div >
+                </div>
                 <div className="major">
                   <img src={frontBag} alt="" />
                   <div className="stop-bleeding">

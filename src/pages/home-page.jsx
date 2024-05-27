@@ -53,6 +53,7 @@ function Home() {
   const [mapCenter, setMapCenter] = useState([6.5244, 7.5186]);
   const [searchResult, setSearchResult] = useState(null);
   const [showAllContacts, setShowAllContacts] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Fetch user's current location
   useEffect(() => {
@@ -149,6 +150,10 @@ function Home() {
     },
   ];
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
       <nav>
@@ -183,7 +188,10 @@ function Home() {
 
       <section>
         <div className="quick-section">
-          <div className="inner-quick-section">
+        <div className="toggle-bar">
+            <button id="toggle-button" onClick={toggleMenu}>☰</button>
+          </div>
+          <div  className={`inner-quick-section ${isMenuOpen ? 'open' : ''}`}>
             <ul>
               <li className="inner-quick-section-1">
                 <Link to="/Home">
@@ -302,7 +310,7 @@ function Home() {
       </section>
 
       <footer>
-        <h2 id="contact-h2">Your emergency contacts</h2>
+        <div className="contact-h2"><h2 id="contact-h2"><span id="Your">Your</span> emergency <span id="your-contact">contacts</span></h2></div>
         <div className="contact-01">
           <div>
             <div className="contact-1">
@@ -386,7 +394,7 @@ function Home() {
           <div className="bag">
             <div>
               <a id="bag-p" href="#" onClick={toggleContacts}>
-                {showAllContacts ? "Hide" : "View all"}
+                {showAllContacts ? "Hide" : "View "}
               </a>
             </div>
 
@@ -404,5 +412,4 @@ function Home() {
 }
 
 export default Home;
-
 

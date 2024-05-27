@@ -10,12 +10,12 @@ body{
   background-color: white;
 }
 
-.App {
+.App-contact {
   text-align: center;
   background-color: white;
 }
 
-.navbar {
+.navbar-contact {
   background-color: white;
   overflow: hidden;
   display: flex;
@@ -66,8 +66,9 @@ body{
 }
 
 
-.header {
+.header-contact {
   background-color: #d20606;
+  color: white;
   padding: 20px;
   text-align: center;
   height: 20vh;
@@ -79,13 +80,16 @@ body{
 }
 
 .cards {
-  display: flex;
-  justify-content: space-around;
+  justify-content: left;
   margin-top: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
 }
 
 .card {
   width: 220px;
+  flex-basis: calc(33.33% - 20px); 
   height: auto;
   padding: 20px;
   margin: 10px;
@@ -94,7 +98,7 @@ body{
   border-radius: 10px;
   border: 2px solid #d20606;
   overflow: hidden;
-  transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s; 
+  transition: background-color 0.5s, border-color 0.5s, box-shadow 0.5s;  
 
 }
 

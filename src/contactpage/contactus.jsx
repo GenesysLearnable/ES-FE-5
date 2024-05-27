@@ -4,7 +4,7 @@ import "../contactus.css";
 import saveme from "./saveme.png";
 function ContactUs() {
   return (
-    <div className="App">
+    <div className="App-contact">
       <nav className="navbar">
         <a href="/Home">
           <img src={saveme} alt="Home Logo" />
@@ -38,7 +38,7 @@ function ContactUs() {
         </Link>
       </nav>
 
-      <header className="header">
+      <header className="header-contact">
         <h1>Contact Our Friendly Team</h1>
         <br />
         <p>Let us know how we can help.</p>

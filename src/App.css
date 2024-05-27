@@ -233,7 +233,7 @@ section h2{
 
 .services p{
   font-size: small;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .services img{
@@ -247,18 +247,23 @@ section h2{
 }
 
 .services-1 {
-  padding-top: 20px;
+
+  /* background-color: #d20606; */
+  /* color: #ffffff; */
+  padding-top: 10px;
+
 }
 
-/* .services-1 h3 {
-  background-color: #d20606;
-  color: #ffffff;
-} */
+.services-1 h3{
+  position: relative;
+  bottom: 10px;
+}
 
 .services-1 p{
   /* background-color: #d20606; */
   /* color: #ffffff; */
-  padding-top: 0px;
+  position: relative;
+  bottom: 19px;
 }
 
 .top-3, .bottom-2{

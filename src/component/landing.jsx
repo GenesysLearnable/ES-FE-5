@@ -79,7 +79,7 @@ function Landing() {
             }
             <span id="location">
               <img src={location} alt="" />
-              <a href="https://www.google.com/maps/@9.0338725,8.677457,6z?entry=ttu">Location</a>
+              <a href="https://www.google.com/maps/@9.0338725,8.677457,6z?entry=ttu"> Location</a>
               <img src={iconss} alt="" />
             </span>
             <button id="btn">

@@ -273,7 +273,7 @@ function Location() {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="locatio-btn">
             <div className="location-BTN">
               <button
                 className="location-BTN-1"

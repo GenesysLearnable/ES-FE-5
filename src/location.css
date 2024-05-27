@@ -69,13 +69,17 @@ section {
   display: flex;
 }
 
+.locatio-btn{
+  margin-right: 100px;
+}
+
 .location-quick-section {
   display: flex;
 }
 
 .location-inner-quick-section {
   width: 350px;
-  padding-left: 80px;
+  padding-left: 0px;
   padding-top: 75px;
 }
 
@@ -109,7 +113,8 @@ section {
 
 .location-BTN {
   padding-top: 30px;
-  padding-left: 70px;
+  padding-left: 50px;
+  width: 1000px;
   color: #333333;
 }
 
